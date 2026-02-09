@@ -8,7 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-I'm a junior student majoring in **Electrical and Computer Engineering** at Zhejiang University. Under the guidance of [Prof. Hanzhi Ma](https://zjui.intl.zju.edu.cn/en/team/teacherinfo/2063), I completed a one-year national SRTP titled *Research on High-Speed Signal Model Based on Machine Learning Methods and Multi-objective Optimiation*.  I had one excellent experience with [Prof. Jixing Cao](https://person.zju.edu.cn/caojixing) during summer research of ZJUI in 2025.   Now I'm a visiting student in research group of [Prof. Huan Zhang](https://www.huan-zhang.com/) at UIUC.
+I'm a junior student majoring in **Electrical and Computer Engineering** at Zhejiang University. Under the guidance of [Prof. Hanzhi Ma](https://zjui.intl.zju.edu.cn/en/team/teacherinfo/2063), I completed a one-year national SRTP titled *Research on High-Speed Signal Model Based on Machine Learning Methods and Multi-objective Optimiation*.  
+I had one excellent experience with [Prof. Jixing Cao](https://person.zju.edu.cn/caojixing) during summer research of ZJUI in 2025.   
+Now I'm a visiting student in research group of [Prof. Huan Zhang](https://www.huan-zhang.com/) at UIUC.
 
 My research interests include:
 * **Topic 1**: Multimodal AI
