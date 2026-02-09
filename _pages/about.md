@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a undergraduate student in Eleectrical and Computer Engineering at Zhejiang University.
+I'm an undergraduate student majoring in **Electrical and Computer Engineering** at Zhejiang University. Under the guidance of [Prof. Hanzhi Ma](https://zjui.intl.zju.edu.cn/en/team/teacherinfo/2063), I completed a one-year national SRTP titled *Research on High-Speed Signal Model Based on Machine Learning and Multi-objective Optimization*. I had one excellent experience with [Prof. Jixing Cao](https://person.zju.edu.cn/caojixing) during summer research in 2025. Now I'm a visiting student in research group of [Prof. Huan Zhang](https://www.huan-zhang.com/) at UIUC.
 
 My research interests include:
 * **Topic 1**: Multimodal AI
@@ -16,10 +16,7 @@ My research interests include:
 * **Topic 3**: Autonomous driving
 
 # 🔥 News
-* **2024.02**: One paper accepted to [Conference Name]!
-* **2023.12**: Joined [Lab Name] as a research assistant.
-
-# 📝 Selected Publications
-*(Note: You can link to your full publication list here or list top papers manually)*
-
-* **Paper Title**, Author A, Author B. *Conference Name*, Year. [[PDF]](link) [[Code]](link)
+* **2025.12**: Autonomous Tracking Drone project in ECE484 has been published on Youtube. [Video](https://www.youtube.com/watch?v=8l80orgLiXs)
+* **2025.08**: What a wonderful EIE summer school experience at Westlake University! [Article](https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ)
+* **2025.06**: Our national SRTP program has been rated as excellent among 24 teams.
+* **2024.11**: We are awarded two prizes: **Best Summer Research Project** and **Best Summer Research Poster**. Out of over 200 teams, we were among **only two** to receive awards. [Certificate](https://github.com/ChiZhang-805/National-SRTP-Poster)
