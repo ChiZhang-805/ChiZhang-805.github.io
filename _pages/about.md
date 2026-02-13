@@ -22,4 +22,4 @@ My research interests include:
 * **2025.12**: Autonomous Tracking Drone project in ECE484 was published on Youtube. [[Video]](https://www.youtube.com/watch?v=8l80orgLiXs)
 * **2025.08**: What a wonderful EIE summer school experience at **Westlake University**! [[Article]](https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ)
 * **2025.06**: Our national SRTP programme has been rated as excellent among 24 teams.
-* **2024.11**: We won the **Best Summer Research Project** and **Best Summer Research Poster**. Out of total 225 teams, we were among **ONLY TWO** to receive both awards. [[Certificate]](https://chizhang-805.github.io/files/srtp_award.pdf)
+* **2024.11**: We won the **Best Summer Research Project** and **Best Summer Research Poster**. Out of total 225 teams, we were the **ONLY TWO** to receive both awards. [[Certificate]](https://chizhang-805.github.io/files/srtp_award.pdf)
