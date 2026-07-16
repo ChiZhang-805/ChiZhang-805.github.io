@@ -174,27 +174,35 @@ function createDrone() {
 
 function createRaceCar() {
   const group = new THREE.Group();
-  group.name = "RaceCar Lab detailed formula car";
-  const red = physicalMaterial(0xd94b3a, { metalness: 0.56, roughness: 0.24, clearcoat: 0.86 });
-  const redDark = physicalMaterial(0x9d261f, { metalness: 0.58, roughness: 0.28, clearcoat: 0.72 });
-  const carbon = physicalMaterial(0x11171c, { metalness: 0.58, roughness: 0.3, clearcoat: 0.42 });
-  const carbonSoft = standardMaterial(0x26333b, { metalness: 0.52, roughness: 0.32 });
+  group.name = "RaceCar Lab McLaren MCL40-inspired formula car";
+  const papaya = physicalMaterial(0xff8000, { metalness: 0.5, roughness: 0.22, clearcoat: 0.94 });
+  const papayaDark = physicalMaterial(0xe75f00, { metalness: 0.54, roughness: 0.25, clearcoat: 0.84 });
+  const carbon = physicalMaterial(0x111417, { metalness: 0.62, roughness: 0.28, clearcoat: 0.46 });
+  const carbonSoft = standardMaterial(0x20242a, { metalness: 0.54, roughness: 0.31 });
   const tire = standardMaterial(0x070809, { metalness: 0.02, roughness: 0.9 });
   const metal = standardMaterial(0xbac4ca, { metalness: 0.9, roughness: 0.22 });
   const darkMetal = standardMaterial(0x2f3940, { metalness: 0.82, roughness: 0.28 });
-  const cyan = standardMaterial(0x43d5f5, { emissive: 0x0c5364, emissiveIntensity: 0.58, metalness: 0.72, roughness: 0.24 });
+  const cyan = standardMaterial(0x22c7c7, { emissive: 0x0b5656, emissiveIntensity: 0.64, metalness: 0.72, roughness: 0.24 });
   const gold = standardMaterial(0xd5b15b, { metalness: 0.72, roughness: 0.28 });
+  const pinstripe = standardMaterial(0xf2f4f3, { metalness: 0.28, roughness: 0.2 });
 
   // Floor, diffuser and sculpted side edges.
   addBox(group, [2.05, 0.1, 5.65], [0, 0.27, -0.28], carbon);
   [-0.92, 0.92].forEach((x) => addBox(group, [0.08, 0.17, 5.45], [x, 0.37, -0.3], carbonSoft));
   [-0.65, 0, 0.65].forEach((x) => addBox(group, [0.06, 0.07, 1.25], [x, 0.44, -3.15], cyan, [-0.24, 0, 0]));
+  [-1, 1].forEach((side) => {
+    [0.78, 0.94, 1.1].forEach((offset, index) => {
+      addBox(group, [0.045, 0.48 - index * 0.07, 0.78], [side * offset, 0.5 + index * 0.035, 1.56 - index * 0.07], index === 0 ? papaya : carbon, [0, side * 0.12, side * -0.04]);
+    });
+  });
 
   // Multi-element front wing with endplates and painted central bridge.
   addBox(group, [3.15, 0.08, 0.42], [0, 0.42, 3.72], carbon);
   addBox(group, [2.72, 0.07, 0.34], [0, 0.55, 3.48], carbonSoft, [-0.13, 0, 0]);
+  addBox(group, [2.35, 0.06, 0.28], [0, 0.67, 3.31], papaya, [-0.2, 0, 0]);
   [-1.55, 1.55].forEach((x) => addBox(group, [0.07, 0.58, 0.65], [x, 0.57, 3.62], carbon));
-  addBox(group, [0.82, 0.08, 0.52], [0, 0.63, 3.64], red);
+  addBox(group, [0.82, 0.08, 0.52], [0, 0.63, 3.64], papaya);
+  addBox(group, [2.2, 0.018, 0.05], [0, 0.705, 3.27], pinstripe, [-0.2, 0, 0]);
 
   // Rear wing, twin supports and endplates.
   addBox(group, [2.42, 0.12, 0.48], [0, 1.65, -3.72], carbon, [0.07, 0, 0]);
@@ -203,18 +211,19 @@ function createRaceCar() {
   [-0.42, 0.42].forEach((x) => addBox(group, [0.08, 1.05, 0.1], [x, 1.15, -3.58], metal, [0.07, 0, 0]));
 
   // Tapered nose and crash structure.
-  const nose = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.47, 2.1, 8), red);
+  const nose = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.47, 2.1, 8), papaya);
   nose.position.set(0, 0.72, 2.72);
   nose.rotation.x = Math.PI / 2;
   nose.castShadow = true;
   group.add(nose);
+  addBox(group, [0.065, 0.025, 1.55], [0, 0.94, 2.64], pinstripe, [-0.015, 0, 0]);
   const noseTip = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 0.2, 0.28, 8), metal);
   noseTip.position.set(0, 0.7, 3.62);
   noseTip.rotation.x = Math.PI / 2;
   group.add(noseTip);
 
   // Monocoque, cockpit opening, seat and instrument shelf.
-  const monocoque = new THREE.Mesh(new THREE.CapsuleGeometry(0.65, 1.72, 8, 20), carbonSoft);
+  const monocoque = new THREE.Mesh(new THREE.CapsuleGeometry(0.65, 1.72, 8, 20), papayaDark);
   monocoque.rotation.x = Math.PI / 2;
   monocoque.scale.set(1.0, 0.72, 1.05);
   monocoque.position.set(0, 0.82, 0.42);
@@ -224,14 +233,21 @@ function createRaceCar() {
   cockpit.scale.set(0.7, 0.55, 1.05);
   cockpit.position.set(0, 1.15, 0.56);
   group.add(cockpit);
+  const helmet = new THREE.Mesh(new THREE.SphereGeometry(0.29, 28, 20), pinstripe);
+  helmet.scale.set(0.92, 1.02, 0.9);
+  helmet.position.set(0, 1.42, 0.48);
+  helmet.castShadow = true;
+  group.add(helmet);
+  addBox(group, [0.42, 0.12, 0.08], [0, 1.45, 0.72], carbon, [-0.08, 0, 0]);
+  addBox(group, [0.44, 0.035, 0.055], [0, 1.33, 0.71], papaya, [-0.08, 0, 0]);
   addBox(group, [0.7, 0.26, 0.98], [0, 0.81, 0.55], standardMaterial(0x3c4449, { roughness: 0.82, metalness: 0.08 }));
   addBox(group, [0.38, 0.08, 0.52], [0, 1.03, 1.0], metal, [0.33, 0, 0]);
 
   // Halo and steering assembly.
-  addCylinderBetween(group, [0, 1.38, 0.9], [0, 1.88, 0.52], 0.055, metal);
-  addCylinderBetween(group, [0, 1.86, 0.5], [-0.58, 1.55, -0.15], 0.055, metal);
-  addCylinderBetween(group, [0, 1.86, 0.5], [0.58, 1.55, -0.15], 0.055, metal);
-  addCylinderBetween(group, [-0.58, 1.55, -0.15], [0.58, 1.55, -0.15], 0.055, metal);
+  addCylinderBetween(group, [0, 1.38, 0.9], [0, 1.88, 0.52], 0.055, carbon);
+  addCylinderBetween(group, [0, 1.86, 0.5], [-0.58, 1.55, -0.15], 0.055, carbon);
+  addCylinderBetween(group, [0, 1.86, 0.5], [0.58, 1.55, -0.15], 0.055, carbon);
+  addCylinderBetween(group, [-0.58, 1.55, -0.15], [0.58, 1.55, -0.15], 0.055, carbon);
   addCylinderBetween(group, [0, 1.04, 0.85], [0, 0.74, 1.55], 0.035, metal);
   addCylinderBetween(group, [-0.72, 0.7, 1.85], [0.72, 0.7, 1.85], 0.055, darkMetal);
   const steeringWheel = new THREE.Mesh(new THREE.TorusGeometry(0.2, 0.035, 12, 28), carbonSoft);
@@ -241,13 +257,25 @@ function createRaceCar() {
 
   // Sidepods, cooling intakes and visible radiator fins.
   [-1, 1].forEach((side) => {
-    addBox(group, [0.52, 0.72, 1.55], [side * 0.94, 0.75, -0.48], side < 0 ? red : redDark);
+    addBox(group, [0.52, 0.72, 1.55], [side * 0.94, 0.75, -0.48], papaya);
+    addBox(group, [0.025, 0.43, 1.16], [side * 1.205, 0.75, -0.46], carbon, [0, side * 0.07, 0]);
+    addBox(group, [0.03, 0.055, 1.26], [side * 1.226, 0.94, -0.43], cyan, [0, side * 0.07, -0.05]);
     addBox(group, [0.42, 0.44, 0.08], [side * 0.91, 0.79, 0.1], darkMetal, [0, side * 0.12, 0]);
     [-0.14, -0.07, 0, 0.07, 0.14].forEach((offset) => {
       addBox(group, [0.018, 0.39, 0.05], [side * 0.94 + offset, 0.79, 0.15], metal);
     });
     addBox(group, [0.42, 0.28, 1.65], [side * 0.68, 0.52, -1.6], carbonSoft, [0.06, 0, side * 0.18]);
   });
+
+  // Papaya engine cover and airbox give the silhouette a current McLaren character.
+  const engineCover = new THREE.Mesh(new THREE.CapsuleGeometry(0.44, 1.35, 8, 18), papayaDark);
+  engineCover.rotation.x = Math.PI / 2;
+  engineCover.scale.set(0.7, 0.78, 1.08);
+  engineCover.position.set(0, 1.04, -1.38);
+  engineCover.castShadow = true;
+  group.add(engineCover);
+  addBox(group, [0.34, 0.7, 0.5], [0, 1.43, -0.82], carbon, [-0.16, 0, 0]);
+  addBox(group, [0.37, 0.08, 1.78], [0, 1.23, -1.42], cyan, [0.02, 0, 0]);
 
   // Exposed electric powertrain details.
   addBox(group, [1.05, 0.38, 1.48], [0, 0.52, -0.75], darkMetal);
@@ -297,6 +325,14 @@ function createRaceCar() {
     const hub = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.09, 0.39, 18), cyan);
     hub.rotation.z = Math.PI / 2;
     wheelGroup.add(hub);
+    const wheelCover = new THREE.Mesh(new THREE.CylinderGeometry(0.33, 0.33, 0.045, 42), carbonSoft);
+    wheelCover.rotation.z = Math.PI / 2;
+    wheelCover.position.x = x > 0 ? 0.19 : -0.19;
+    wheelGroup.add(wheelCover);
+    const wheelCoverHub = new THREE.Mesh(new THREE.CylinderGeometry(0.105, 0.105, 0.06, 6), pinstripe);
+    wheelCoverHub.rotation.z = Math.PI / 2;
+    wheelCoverHub.position.x = x > 0 ? 0.22 : -0.22;
+    wheelGroup.add(wheelCoverHub);
     const disc = new THREE.Mesh(new THREE.CylinderGeometry(0.27, 0.27, 0.06, 30), metal);
     disc.rotation.z = Math.PI / 2;
     wheelGroup.add(disc);
@@ -306,25 +342,25 @@ function createRaceCar() {
 
   [-1, 1].forEach((side) => {
     [[0.52, 0.92, 1.68, 1.38, 0.78, 2.15], [0.52, 0.92, 2.03, 1.38, 0.78, 2.15], [0.54, 0.46, 1.66, 1.38, 0.42, 2.15], [0.54, 0.46, 2.04, 1.38, 0.42, 2.15]].forEach(([sx, sy, sz, ex, ey, ez]) => addCylinderBetween(group, [side * sx, sy, sz], [side * ex, ey, ez], 0.025, metal));
-    addCylinderBetween(group, [side * 1.36, 0.66, 2.15], [side * 0.32, 1.22, 1.78], 0.032, red);
+    addCylinderBetween(group, [side * 1.36, 0.66, 2.15], [side * 0.32, 1.22, 1.78], 0.032, papaya);
     [[0.55, 0.95, -1.9, 1.38, 0.78, -2.35], [0.55, 0.95, -2.35, 1.38, 0.78, -2.35], [0.56, 0.46, -1.9, 1.38, 0.42, -2.35], [0.56, 0.46, -2.38, 1.38, 0.42, -2.35]].forEach(([sx, sy, sz, ex, ey, ez]) => addCylinderBetween(group, [side * sx, sy, sz], [side * ex, ey, ez], 0.025, metal));
-    addCylinderBetween(group, [side * 1.36, 0.66, -2.35], [side * 0.36, 1.18, -2.03], 0.032, red);
+    addCylinderBetween(group, [side * 1.36, 0.66, -2.35], [side * 0.36, 1.18, -2.03], 0.032, papaya);
   });
 
-  // A small code-generated team mark, echoing the full RaceCar Lab livery system.
+  // Code-generated MCL40-inspired number and team mark, matching the full RaceCar Lab livery system.
   const liveryCanvas = document.createElement("canvas");
   liveryCanvas.width = 768;
   liveryCanvas.height = 256;
   const context = liveryCanvas.getContext("2d");
   if (context) {
     context.clearRect(0, 0, 768, 256);
-    context.fillStyle = "#ffffff";
+    context.fillStyle = "#f2f4f3";
     context.font = "900 128px Arial Black, Arial, sans-serif";
-    context.fillText("01", 18, 142);
-    context.fillStyle = "#43d5f5";
+    context.fillText("04", 18, 142);
+    context.fillStyle = "#22c7c7";
     context.fillRect(240, 58, 470, 14);
-    context.font = "800 54px Arial, sans-serif";
-    context.fillText("RACECAR LAB", 242, 145);
+    context.font = "800 50px Arial, sans-serif";
+    context.fillText("MCL40 · RACECAR LAB", 242, 145);
     const texture = new THREE.CanvasTexture(liveryCanvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     [-1, 1].forEach((side) => {
@@ -372,13 +408,13 @@ function initializeViewer(container) {
   key.position.set(4, 7, 5);
   key.castShadow = true;
   scene.add(key);
-  const accent = new THREE.PointLight(type === "drone" ? 0xd454ff : 0xff4b46, 13, 10);
+  const accent = new THREE.PointLight(type === "drone" ? 0xd454ff : 0xff8000, 13, 10);
   accent.position.set(-3.5, 2.4, -2.2);
   scene.add(accent);
-  const cyan = new THREE.PointLight(0x3bdcf4, 10, 9);
+  const cyan = new THREE.PointLight(type === "drone" ? 0x3bdcf4 : 0x22c7c7, 10, 9);
   cyan.position.set(3, 1.5, 3);
   scene.add(cyan);
-  const rim = new THREE.DirectionalLight(type === "drone" ? 0xff69da : 0xff7b62, 2.2);
+  const rim = new THREE.DirectionalLight(type === "drone" ? 0xff69da : 0xff9a32, 2.2);
   rim.position.set(-4, 3.5, -5);
   scene.add(rim);
 

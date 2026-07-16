@@ -20,17 +20,19 @@ redirect_from:
           <span><span data-i18n="hero.titleLine2">engineering</span> <em data-i18n="hero.titleAccent">visible.</em></span>
         </h1>
         <p class="portfolio-hero-lead" data-i18n="hero.lead">
-          I build interactive systems for autonomous machines, simulation, and engineering education—turning difficult workflows into experiences people can see, test, and understand.
+          I build interactive systems for autonomous machines, simulation, and engineering education—turning difficult workflows into experiences people can see, test, understand, and refine through direct interaction.
         </p>
-        <div class="portfolio-actions" aria-label="Primary links" data-i18n-aria-label="aria.primaryLinks">
-          <a class="portfolio-button portfolio-button--primary" href="#work"><span data-i18n="hero.explore">Explore selected work</span> <span aria-hidden="true">↓</span></a>
-          <a class="portfolio-button portfolio-button--quiet" href="https://github.com/ChiZhang-805">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg></a>
+        <div class="portfolio-hero-controls">
+          <div class="portfolio-actions" aria-label="Primary links" data-i18n-aria-label="aria.primaryLinks">
+            <a class="portfolio-button portfolio-button--primary" href="#work"><span data-i18n="hero.explore">Explore selected work</span> <span aria-hidden="true">↓</span></a>
+            <a class="portfolio-button portfolio-button--quiet" href="https://github.com/ChiZhang-805">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg></a>
+          </div>
+          <ul class="portfolio-hero-meta" aria-label="Current profile" data-i18n-aria-label="aria.currentProfile">
+            <li><strong data-i18n="hero.ece">ECE</strong><span data-i18n="hero.school">ZJU–UIUC</span></li>
+            <li><strong data-i18n="hero.exchange">Exchange student</strong><span data-i18n="hero.exchangeSchool">UIC</span></li>
+            <li><strong data-i18n="hero.based">Based in</strong><span data-i18n="hero.city">Hangzhou</span></li>
+          </ul>
         </div>
-        <ul class="portfolio-hero-meta" aria-label="Current profile" data-i18n-aria-label="aria.currentProfile">
-          <li><strong data-i18n="hero.ece">ECE</strong><span data-i18n="hero.school">ZJU–UIUC</span></li>
-          <li><strong data-i18n="hero.visiting">Visiting student</strong><span>UIUC</span></li>
-          <li><strong data-i18n="hero.based">Based in</strong><span data-i18n="hero.city">Hangzhou</span></li>
-        </ul>
       </div>
 
       <aside class="portfolio-profile-card" aria-label="Volunteer teaching story and social links" data-i18n-aria-label="aria.storyAndSocial" data-reveal>
@@ -39,7 +41,7 @@ redirect_from:
             <span class="portfolio-story-inner">
               <span class="portfolio-story-face portfolio-story-face--front">
                 <img src="{{ '/assets/media/journey/meitan/meitan-01.webp' | relative_url }}" alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou Province" data-i18n-alt="story.alt" width="1440" height="1080" />
-                <span class="portfolio-story-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M18.4 9A7 7 0 0 0 6.2 6.2L4 8M5.6 15A7 7 0 0 0 17.8 17.8L20 16"></path></svg><span data-i18n="story.hint">Click the photo to learn more</span></span>
+                <span class="portfolio-story-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M18.4 9A7 7 0 0 0 6.2 6.2L4 8M5.6 15A7 7 0 0 0 17.8 17.8L20 16"></path></svg><span data-i18n="story.hint">Click to learn more</span></span>
               </span>
               <span class="portfolio-story-face portfolio-story-face--back">
                 <span class="portfolio-story-eyebrow" data-i18n="story.eyebrow">Beyond engineering</span>
@@ -106,9 +108,9 @@ redirect_from:
                 </a>
               </div>
             </div>
-            <p class="portfolio-project-byline">Chi Zhang · Bin Hu</p>
+            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="https://binhu7.github.io/" target="_blank" rel="noopener noreferrer">Bin Hu</a></p>
             <p class="portfolio-project-description" data-i18n="project.droneDescription">
-              A local-first PX4 and Gazebo tuning platform designed to turn control-parameter search into a visual, repeatable workflow—from experiment setup and simulation to comparison and evidence.
+              DroneDream is a local-first PX4 and Gazebo tuning platform that turns control-parameter search into a visual, repeatable engineering workflow. It connects experiment setup, simulation, comparison, and evidence so users can understand each tuning decision, revisit results, and move from trial and error toward confident autonomous-flight development.
             </p>
           </div>
         </article>
@@ -132,9 +134,9 @@ redirect_from:
                 </a>
               </div>
             </div>
-            <p class="portfolio-project-byline">Chi Zhang · Yi Youcheng</p>
+            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Yi Youcheng</a></p>
             <p class="portfolio-project-description" data-i18n="project.raceDescription">
-              An interactive formula-car engineering lab with code-generated 3D vehicles, component teardown, formulas, diagnostics, and bilingual learning paths—built for learning by exploration.
+              RaceCar Lab is an interactive formula-car engineering environment with a code-generated 3D vehicle, component studies, formulas, diagnostics, and bilingual learning paths. Its McLaren-inspired presentation reflects my support for McLaren and Lando Norris, while my girlfriend supports Ferrari and Charles Leclerc—turning our friendly rivalry into a personal way to explore racing engineering.
             </p>
           </div>
         </article>
@@ -150,10 +152,10 @@ redirect_from:
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
           <p class="portfolio-about-lead" data-i18n="about.intro">
-            I am an Electrical and Computer Engineering student at Zhejiang University and a visiting student in Prof. Huan Zhang’s research group at UIUC.
+            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Chicago during my junior year. I value collaborative study.
           </p>
           <p data-i18n="about.body">
-            My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, AI, simulation, and interactive engineering education.
+            My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, artificial intelligence, simulation, and interactive engineering education, and keeps every tool grounded in real engineering practice.
           </p>
         </div>
         <figure class="portfolio-about-portrait" data-reveal>
@@ -169,11 +171,11 @@ redirect_from:
         <h2 class="portfolio-section-index" id="news-title"><span>03 /</span> <span data-i18n="section.news">News</span></h2>
       </header>
       <ol class="portfolio-news-list" data-reveal>
-        <li><time datetime="2026-02">2026.02</time><p data-i18n="news.dean">I was named to the Fall 2025 Dean’s List at The Grainger College of Engineering, University of Illinois Urbana-Champaign.</p><a href="{{ '/files/dean_list.pdf' | relative_url }}"><span data-i18n="common.certificate">Certificate</span> ↗</a></li>
-        <li><time datetime="2025-12">2025.12</time><p data-i18n="news.drone">I published the Autonomous Tracking Drone project developed for ECE 484, together with a video demonstration of the system.</p><a href="https://www.youtube.com/watch?v=8l80orgLiXs"><span data-i18n="common.video">Video</span> ↗</a></li>
-        <li><time datetime="2025-08">2025.08</time><p data-i18n="news.westlake">I participated in the EIE Summer School at Westlake University, where I explored interdisciplinary topics in electronic and information engineering.</p><a href="https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ"><span data-i18n="common.article">Article</span> ↗</a></li>
+        <li><time datetime="2026-02">2026.02</time><p data-i18n="news.dean">I was named to the Fall 2025 Dean’s List at The Grainger College of Engineering, University of Illinois Urbana-Champaign.</p><a class="portfolio-news-link" href="{{ '/files/dean_list.pdf' | relative_url }}" aria-label="Certificate" data-i18n-aria-label="common.certificate" title="Certificate" data-i18n-title="common.certificate"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="m8.5 13.5-1.4 7 4.9-2.2 4.9 2.2-1.4-7M10 9l1.3 1.3L14.5 7"></path></svg></a></li>
+        <li><time datetime="2025-12">2025.12</time><p data-i18n="news.drone">I published the Autonomous Tracking Drone project developed for ECE 484, together with a video demonstration of the system.</p><a class="portfolio-news-link" href="https://www.youtube.com/watch?v=8l80orgLiXs" target="_blank" rel="noopener noreferrer" aria-label="Video" data-i18n-aria-label="common.video" title="Video" data-i18n-title="common.video"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4Z"></path></svg></a></li>
+        <li><time datetime="2025-08">2025.08</time><p data-i18n="news.westlake">I participated in the EIE Summer School at Westlake University, where I explored interdisciplinary topics in electronic and information engineering through lectures, technical discussions, and collaborative learning with students from different academic backgrounds.</p><a class="portfolio-news-link" href="https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ" target="_blank" rel="noopener noreferrer" aria-label="Article" data-i18n-aria-label="common.article" title="Article" data-i18n-title="common.article"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6Z"></path><path d="M15 3v4h4M9 11h6M9 15h6"></path></svg></a></li>
         <li><time datetime="2025-06">2025.06</time><p data-i18n="news.srtp">Our National SRTP project received an Excellent evaluation in a cohort of 24 participating teams.</p><span aria-hidden="true"></span></li>
-        <li><time datetime="2024-11">2024.11</time><p data-i18n="news.awards">Our summer research project received both the Best Summer Research Project award and the Best Summer Research Poster award.</p><a href="{{ '/files/srtp_award.pdf' | relative_url }}"><span data-i18n="common.certificate">Certificate</span> ↗</a></li>
+        <li><time datetime="2024-11">2024.11</time><p data-i18n="news.awards">Our summer research project received both the Best Summer Research Project award and the Best Summer Research Poster award.</p><a class="portfolio-news-link" href="{{ '/files/srtp_award.pdf' | relative_url }}" aria-label="Certificate" data-i18n-aria-label="common.certificate" title="Certificate" data-i18n-title="common.certificate"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="m8.5 13.5-1.4 7 4.9-2.2 4.9 2.2-1.4-7M10 9l1.3 1.3L14.5 7"></path></svg></a></li>
       </ol>
     </div>
   </section>
