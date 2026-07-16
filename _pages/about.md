@@ -15,14 +15,16 @@ redirect_from:
     <div class="portfolio-hero-orbit portfolio-hero-orbit--two" aria-hidden="true"></div>
     <div class="portfolio-shell portfolio-hero-layout">
       <div class="portfolio-hero-copy" data-reveal>
-        <p class="portfolio-kicker"><span></span> Chi Zhang · Engineer &amp; Builder</p>
-        <h1 id="portfolio-title">Making complex engineering <em>visible.</em></h1>
+        <h1 id="portfolio-title">
+          <span>Making complex</span>
+          <span>engineering <em>visible.</em></span>
+        </h1>
         <p class="portfolio-hero-lead">
           I build interactive systems for autonomous machines, simulation, and engineering education—turning difficult workflows into experiences people can see, test, and understand.
         </p>
         <div class="portfolio-actions" aria-label="Primary links">
           <a class="portfolio-button portfolio-button--primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
-          <a class="portfolio-button portfolio-button--quiet" href="https://github.com/ChiZhang-805">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="portfolio-button portfolio-button--quiet" href="https://github.com/ChiZhang-805">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg></a>
         </div>
         <ul class="portfolio-hero-meta" aria-label="Current profile">
           <li><strong>ECE</strong><span>ZJU–UIUC</span></li>
@@ -31,30 +33,44 @@ redirect_from:
         </ul>
       </div>
 
-      <aside class="portfolio-profile-card" aria-label="Profile summary" data-reveal>
+      <aside class="portfolio-profile-card" aria-label="Portrait and social links" data-reveal>
         <div class="portfolio-profile-photo">
           <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Chi Zhang" width="520" height="650" />
-          <span class="portfolio-status"><i></i> Research · systems · simulation</span>
         </div>
-        <div class="portfolio-profile-copy">
-          <div>
-            <p>Currently exploring</p>
-            <strong>Multimodal AI · LLM reasoning · autonomous systems</strong>
-          </div>
-          <a href="mailto:cz005623@gmail.com" aria-label="Email Chi Zhang">Email me <span aria-hidden="true">↗</span></a>
-        </div>
+        <nav class="portfolio-social-links" aria-label="Social links">
+          <a href="{{ '/' | relative_url }}" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="X" title="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4 19 20M19 4 5 20"></path></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 21v-8h2.8l.4-3h-3.2V8.1c0-.9.3-1.5 1.6-1.5H18V4a24 24 0 0 0-2.5-.2c-2.5 0-4.2 1.5-4.2 4.3V10H8.5v3h2.8v8"></path></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M7 10v7M7 7v.1M11 17v-7M11 13a3 3 0 0 1 6 0v4"></path></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="Xiaohongshu" title="Xiaohongshu">
+            <svg class="portfolio-social-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="4"></rect><text x="12" y="14.8" text-anchor="middle">RED</text></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="Douyin" title="Douyin">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4v11.2a3.8 3.8 0 1 1-3.2-3.8M14 4c.8 2.7 2.4 4.2 5 4.6"></path></svg>
+          </a>
+          <a href="{{ '/' | relative_url }}" aria-label="WeChat" title="WeChat">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.8 14.8c-1 .7-2.2 1.1-3.6 1.1-.7 0-1.4-.1-2-.3L5.7 18l.8-3.2A6.3 6.3 0 0 1 4 10c0-3.3 3.2-6 7.2-6 3.7 0 6.8 2.4 7.1 5.4"></path><path d="M20 14.3c0 2.6-2.5 4.7-5.6 4.7-.6 0-1.2-.1-1.8-.3L10 20l.6-2.4a4.4 4.4 0 0 1-1.8-3.3c0-2.6 2.5-4.7 5.6-4.7s5.6 2.1 5.6 4.7Z"></path></svg>
+          </a>
+        </nav>
       </aside>
     </div>
   </section>
 
   <section class="portfolio-section portfolio-work" id="work" aria-labelledby="work-title">
     <div class="portfolio-shell">
-      <header class="portfolio-section-heading" data-reveal>
-        <div>
-          <p class="portfolio-section-index">01 / Selected work</p>
-          <h2 id="work-title">Projects built to be explored.</h2>
-        </div>
-        <p>Two ongoing projects at the intersection of simulation, autonomy, and interactive technical learning.</p>
+      <header class="portfolio-section-heading portfolio-section-heading--compact" data-reveal>
+        <p class="portfolio-section-index" id="work-title">01 / Selected work</p>
       </header>
 
       <div class="portfolio-project-list">
@@ -78,7 +94,7 @@ redirect_from:
                 </a>
               </div>
             </div>
-            <p class="portfolio-project-byline">Chi Zhang</p>
+            <p class="portfolio-project-byline">Chi Zhang · Bin Hu</p>
             <p class="portfolio-project-description">
               A local-first PX4 and Gazebo tuning platform designed to turn control-parameter search into a visual, repeatable workflow—from experiment setup and simulation to comparison and evidence.
             </p>
