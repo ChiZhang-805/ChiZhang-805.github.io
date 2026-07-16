@@ -32,7 +32,7 @@ author_profile: false
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-index">01</span>
           <span class="journey-card-title" data-i18n="journey.meitanTitle">Teaching in Meitan, Guizhou Province</span>
-          <span class="journey-card-count">24 <span data-i18n="journey.photos">photos</span></span>
+          <span class="journey-card-count">17 <span data-i18n="journey.photos">photos</span></span>
         </button>
 
         <button class="journey-card journey-card--archive" type="button" data-gallery="ece484" data-reveal aria-label="Open ECE 484 Autonomous Tracking Drone gallery" data-i18n-aria-label="journey.openEce">

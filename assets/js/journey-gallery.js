@@ -15,7 +15,7 @@
         en: "Teaching in Meitan, Guizhou Province",
         zh: "贵州湄潭支教"
       },
-      photos: makePhotos("meitan", "meitan", 24)
+      photos: makePhotos("meitan", "meitan", 17)
     },
     ece484: {
       title: {
