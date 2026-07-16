@@ -38,12 +38,12 @@ redirect_from:
           <button class="portfolio-story-toggle" type="button" aria-pressed="false" aria-label="Flip the photo to read the volunteer teaching story" data-i18n-aria-label="story.flipLabel">
             <span class="portfolio-story-inner">
               <span class="portfolio-story-face portfolio-story-face--front">
-                <img src="{{ '/images/guizhou-meitan-teaching.jpg' | relative_url }}" alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou" data-i18n-alt="story.alt" width="1440" height="1080" />
+                <img src="{{ '/assets/media/journey/meitan/meitan-01.webp' | relative_url }}" alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou Province" data-i18n-alt="story.alt" width="1440" height="1080" />
                 <span class="portfolio-story-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M18.4 9A7 7 0 0 0 6.2 6.2L4 8M5.6 15A7 7 0 0 0 17.8 17.8L20 16"></path></svg><span data-i18n="story.hint">Click the photo to learn more</span></span>
               </span>
               <span class="portfolio-story-face portfolio-story-face--back">
                 <span class="portfolio-story-eyebrow" data-i18n="story.eyebrow">Beyond engineering</span>
-                <strong data-i18n="story.title">Teaching in Meitan, Guizhou</strong>
+                <strong data-i18n="story.title">Teaching in Meitan, Guizhou Province</strong>
                 <span class="portfolio-story-copy" data-i18n="story.body">Together with my classmates, I traveled to a rural community in China to share knowledge with local children. We taught mathematics, Chinese, physical education, and other classes—learning from the students as much as they learned from us.</span>
                 <span class="portfolio-story-return" data-i18n="story.return">Click to return</span>
               </span>
@@ -178,10 +178,31 @@ redirect_from:
     </div>
   </section>
 
-  <section class="portfolio-beyond" aria-labelledby="beyond-title">
-    <div class="portfolio-shell" data-reveal>
-      <h2 class="portfolio-section-index" id="beyond-title"><span>04 /</span> <span data-i18n="section.beyond">Beyond engineering</span></h2>
-      <p data-i18n="beyond.body">Outside the lab, I care about engineering education, volunteer teaching, and creating learning experiences that help students build confidence through practice.</p>
+  <section class="portfolio-journey" id="journey" aria-labelledby="journey-title">
+    <div class="portfolio-shell">
+      <header class="portfolio-journey-heading" data-reveal>
+        <h2 class="portfolio-section-index" id="journey-title"><span>04 /</span> <span data-i18n="section.journey">My Journey</span></h2>
+        <a class="portfolio-journey-more" href="{{ '/journey/' | relative_url }}" aria-label="View all journeys" data-i18n-aria-label="journey.more" title="View all journeys" data-i18n-title="journey.more">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </header>
+      <div class="portfolio-journey-grid">
+        <a class="journey-card journey-card--home" href="{{ '/journey/#meitan' | relative_url }}" aria-label="Open Teaching in Meitan, Guizhou Province gallery" data-i18n-aria-label="journey.openMeitan" data-reveal>
+          <img src="{{ '/assets/media/journey/meitan/meitan-01.webp' | relative_url }}" alt="Volunteer teaching group with students in Meitan, Guizhou Province" data-i18n-alt="journey.meitanAlt" width="1440" height="1080" loading="lazy" />
+          <span class="journey-card-shade" aria-hidden="true"></span>
+          <span class="journey-card-title" data-i18n="journey.meitanTitle">Teaching in Meitan, Guizhou Province</span>
+        </a>
+        <a class="journey-card journey-card--home" href="{{ '/journey/#ece484' | relative_url }}" aria-label="Open ECE 484 Autonomous Tracking Drone gallery" data-i18n-aria-label="journey.openEce" data-reveal>
+          <img src="{{ '/assets/media/journey/ece484/ece484-01.webp' | relative_url }}" alt="Drone flight-testing facility for ECE 484" data-i18n-alt="journey.eceAlt" width="1702" height="1276" loading="lazy" />
+          <span class="journey-card-shade" aria-hidden="true"></span>
+          <span class="journey-card-title" data-i18n="journey.eceTitle">ECE 484 — Autonomous Tracking Drone</span>
+        </a>
+        <a class="journey-card journey-card--home" href="{{ '/journey/#chicago' | relative_url }}" aria-label="Open A Journey Through Chicago gallery" data-i18n-aria-label="journey.openChicago" data-reveal>
+          <img src="{{ '/assets/media/journey/chicago/chicago-01.webp' | relative_url }}" alt="Cloud Gate in Chicago framed by trees" data-i18n-alt="journey.chicagoAlt" width="1707" height="1280" loading="lazy" />
+          <span class="journey-card-shade" aria-hidden="true"></span>
+          <span class="journey-card-title" data-i18n="journey.chicagoTitle">A Journey Through Chicago</span>
+        </a>
+      </div>
     </div>
   </section>
 </main>
