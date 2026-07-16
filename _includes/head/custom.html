@@ -12,6 +12,11 @@
 <link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-192x192.png" sizes="192x192"/>
 <link rel="manifest" href="{{ base_path }}/images/manifest.json"/>
 <link rel="icon" href="/images/favicon.ico"/>
+{% if page.layout == "portfolio" %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/portfolio.css"/>
+<meta name="theme-color" content="#f5f7fb"/>
+{% else %}
 <meta name="theme-color" content="#ffffff"/>
+{% endif %}
 
 <!-- end custom head snippets -->
