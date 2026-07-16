@@ -16,28 +16,41 @@ redirect_from:
     <div class="portfolio-shell portfolio-hero-layout">
       <div class="portfolio-hero-copy" data-reveal>
         <h1 id="portfolio-title">
-          <span>Making complex</span>
-          <span>engineering <em>visible.</em></span>
+          <span data-i18n="hero.titleLine1">Making complex</span>
+          <span><span data-i18n="hero.titleLine2">engineering</span> <em data-i18n="hero.titleAccent">visible.</em></span>
         </h1>
-        <p class="portfolio-hero-lead">
+        <p class="portfolio-hero-lead" data-i18n="hero.lead">
           I build interactive systems for autonomous machines, simulation, and engineering education—turning difficult workflows into experiences people can see, test, and understand.
         </p>
-        <div class="portfolio-actions" aria-label="Primary links">
-          <a class="portfolio-button portfolio-button--primary" href="#work">Explore selected work <span aria-hidden="true">↓</span></a>
+        <div class="portfolio-actions" aria-label="Primary links" data-i18n-aria-label="aria.primaryLinks">
+          <a class="portfolio-button portfolio-button--primary" href="#work"><span data-i18n="hero.explore">Explore selected work</span> <span aria-hidden="true">↓</span></a>
           <a class="portfolio-button portfolio-button--quiet" href="https://github.com/ChiZhang-805">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg></a>
         </div>
-        <ul class="portfolio-hero-meta" aria-label="Current profile">
-          <li><strong>ECE</strong><span>ZJU–UIUC</span></li>
-          <li><strong>Visiting student</strong><span>UIUC</span></li>
-          <li><strong>Based in</strong><span>Hangzhou</span></li>
+        <ul class="portfolio-hero-meta" aria-label="Current profile" data-i18n-aria-label="aria.currentProfile">
+          <li><strong data-i18n="hero.ece">ECE</strong><span data-i18n="hero.school">ZJU–UIUC</span></li>
+          <li><strong data-i18n="hero.visiting">Visiting student</strong><span>UIUC</span></li>
+          <li><strong data-i18n="hero.based">Based in</strong><span data-i18n="hero.city">Hangzhou</span></li>
         </ul>
       </div>
 
-      <aside class="portfolio-profile-card" aria-label="Portrait and social links" data-reveal>
-        <div class="portfolio-profile-photo">
-          <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Chi Zhang" width="520" height="650" />
+      <aside class="portfolio-profile-card" aria-label="Volunteer teaching story and social links" data-i18n-aria-label="aria.storyAndSocial" data-reveal>
+        <div class="portfolio-story-card" data-photo-card>
+          <button class="portfolio-story-toggle" type="button" aria-pressed="false" aria-label="Flip the photo to read the volunteer teaching story" data-i18n-aria-label="story.flipLabel">
+            <span class="portfolio-story-inner">
+              <span class="portfolio-story-face portfolio-story-face--front">
+                <img src="{{ '/images/guizhou-meitan-teaching.jpg' | relative_url }}" alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou" data-i18n-alt="story.alt" width="1440" height="1080" />
+                <span class="portfolio-story-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M18.4 9A7 7 0 0 0 6.2 6.2L4 8M5.6 15A7 7 0 0 0 17.8 17.8L20 16"></path></svg><span data-i18n="story.hint">Click the photo to learn more</span></span>
+              </span>
+              <span class="portfolio-story-face portfolio-story-face--back">
+                <span class="portfolio-story-eyebrow" data-i18n="story.eyebrow">Beyond engineering</span>
+                <strong data-i18n="story.title">Teaching in Meitan, Guizhou</strong>
+                <span class="portfolio-story-copy" data-i18n="story.body">Together with my classmates, I traveled to a rural community in China to share knowledge with local children. We taught mathematics, Chinese, physical education, and other classes—learning from the students as much as they learned from us.</span>
+                <span class="portfolio-story-return" data-i18n="story.return">Click to return</span>
+              </span>
+            </span>
+          </button>
         </div>
-        <nav class="portfolio-social-links" aria-label="Social links">
+        <nav class="portfolio-social-links" aria-label="Social links" data-i18n-aria-label="aria.socialLinks">
           <a class="portfolio-social-link--email" href="{{ '/' | relative_url }}" aria-label="Email" title="Email">
             <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z"></path></svg>
           </a>
@@ -69,57 +82,58 @@ redirect_from:
 
   <section class="portfolio-section portfolio-work" id="work" aria-labelledby="work-title">
     <div class="portfolio-shell">
-      <header class="portfolio-section-heading portfolio-section-heading--compact" data-reveal>
-        <p class="portfolio-section-index" id="work-title">01 / Selected work</p>
+      <header class="portfolio-section-heading" data-reveal>
+        <h2 class="portfolio-section-index" id="work-title"><span>01 /</span> <span data-i18n="section.work">Selected work</span></h2>
       </header>
 
       <div class="portfolio-project-list">
-        <article class="portfolio-project-card portfolio-project-card--drone" data-project-card data-reveal>
-          <a class="portfolio-project-media" href="http://47.93.180.216/" aria-label="Open the DroneDream live project">
-            <picture>
-              <source media="(prefers-reduced-motion: reduce)" srcset="{{ '/assets/media/projects/dronedream-poster.webp' | relative_url }}" />
-              <img class="portfolio-project-image portfolio-project-image--drone" src="{{ '/assets/media/projects/dronedream-loop.webp' | relative_url }}" alt="Animated 3D DroneDream quadcopter taking off in a simulation scene" width="760" height="520" loading="eager" />
-            </picture>
-          </a>
+        <article class="portfolio-project-card portfolio-project-card--drone" data-reveal>
+          <div class="portfolio-project-media" data-project-viewer="drone" aria-label="Interactive 3D DroneDream quadcopter" data-i18n-aria-label="project.droneViewer">
+            <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/dronedream-poster.webp' | relative_url }}" alt="DroneDream quadcopter in a simulation scene" data-i18n-alt="project.droneAlt" width="760" height="760" loading="lazy" />
+            <canvas aria-hidden="true"></canvas>
+            <span class="portfolio-model-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8z"></path><path d="m8 8 4-3 4 3M16 16l-4 3-4-3"></path></svg><span data-i18n="project.drag">Drag to rotate</span></span>
+          </div>
 
           <div class="portfolio-project-copy">
             <div class="portfolio-project-title-row">
               <h3>DroneDream</h3>
-              <div class="portfolio-project-icon-links" aria-label="DroneDream links">
-                <a href="http://47.93.180.216/" target="_blank" rel="noopener noreferrer" aria-label="Open the DroneDream website" title="Website">
+              <div class="portfolio-project-icon-links" aria-label="DroneDream links" data-i18n-aria-label="project.droneLinks">
+                <a href="http://47.93.180.216/" target="_blank" rel="noopener noreferrer" aria-label="Open the DroneDream website" data-i18n-aria-label="project.droneSite" title="Website" data-i18n-title="common.website">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21M12 3C9.8 5.5 8.6 8.5 8.6 12s1.2 6.5 3.4 9"></path></svg>
                 </a>
-                <a href="https://github.com/ChiZhang-805/DroneDream" target="_blank" rel="noopener noreferrer" aria-label="Open the DroneDream GitHub repository" title="GitHub">
+                <a href="https://github.com/ChiZhang-805/DroneDream" target="_blank" rel="noopener noreferrer" aria-label="Open the DroneDream GitHub repository" data-i18n-aria-label="project.droneGithub" title="GitHub">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg>
                 </a>
               </div>
             </div>
             <p class="portfolio-project-byline">Chi Zhang · Bin Hu</p>
-            <p class="portfolio-project-description">
+            <p class="portfolio-project-description" data-i18n="project.droneDescription">
               A local-first PX4 and Gazebo tuning platform designed to turn control-parameter search into a visual, repeatable workflow—from experiment setup and simulation to comparison and evidence.
             </p>
           </div>
         </article>
 
-        <article class="portfolio-project-card portfolio-project-card--racecar" data-project-card data-reveal>
-          <a class="portfolio-project-media" href="http://124.221.220.60/" aria-label="Open the RaceCar Lab live project">
-            <img class="portfolio-project-image" src="{{ '/assets/media/projects/racecar-lab.webp' | relative_url }}" alt="Interactive 3D formula race car in RaceCar Lab" width="760" height="520" loading="lazy" />
-          </a>
+        <article class="portfolio-project-card portfolio-project-card--racecar" data-reveal>
+          <div class="portfolio-project-media" data-project-viewer="racecar" aria-label="Interactive 3D formula race car" data-i18n-aria-label="project.raceViewer">
+            <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/racecar-lab.webp' | relative_url }}" alt="Formula race car in RaceCar Lab" data-i18n-alt="project.raceAlt" width="760" height="760" loading="lazy" />
+            <canvas aria-hidden="true"></canvas>
+            <span class="portfolio-model-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8z"></path><path d="m8 8 4-3 4 3M16 16l-4 3-4-3"></path></svg><span data-i18n="project.drag">Drag to rotate</span></span>
+          </div>
 
           <div class="portfolio-project-copy">
             <div class="portfolio-project-title-row">
               <h3>RaceCar Lab</h3>
-              <div class="portfolio-project-icon-links" aria-label="RaceCar Lab links">
-                <a href="http://124.221.220.60/" target="_blank" rel="noopener noreferrer" aria-label="Open the RaceCar Lab website" title="Website">
+              <div class="portfolio-project-icon-links" aria-label="RaceCar Lab links" data-i18n-aria-label="project.raceLinks">
+                <a href="http://124.221.220.60/" target="_blank" rel="noopener noreferrer" aria-label="Open the RaceCar Lab website" data-i18n-aria-label="project.raceSite" title="Website" data-i18n-title="common.website">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21M12 3C9.8 5.5 8.6 8.5 8.6 12s1.2 6.5 3.4 9"></path></svg>
                 </a>
-                <a href="https://github.com/ChiZhang-805/racecar-lab" target="_blank" rel="noopener noreferrer" aria-label="Open the RaceCar Lab GitHub repository" title="GitHub">
+                <a href="https://github.com/ChiZhang-805/racecar-lab" target="_blank" rel="noopener noreferrer" aria-label="Open the RaceCar Lab GitHub repository" data-i18n-aria-label="project.raceGithub" title="GitHub">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg>
                 </a>
               </div>
             </div>
             <p class="portfolio-project-byline">Chi Zhang · Yi Youcheng</p>
-            <p class="portfolio-project-description">
+            <p class="portfolio-project-description" data-i18n="project.raceDescription">
               An interactive formula-car engineering lab with code-generated 3D vehicles, component teardown, formulas, diagnostics, and bilingual learning paths—built for learning by exploration.
             </p>
           </div>
@@ -129,23 +143,22 @@ redirect_from:
   </section>
 
   <section class="portfolio-section portfolio-about" id="about" aria-labelledby="about-title">
-    <div class="portfolio-shell portfolio-about-layout">
-      <header data-reveal>
-        <p class="portfolio-section-index">02 / About</p>
-        <h2 id="about-title">Research-minded.<br />Product-driven.</h2>
+    <div class="portfolio-shell">
+      <header class="portfolio-section-heading" data-reveal>
+        <h2 class="portfolio-section-index" id="about-title"><span>02 /</span> <span data-i18n="section.about">About</span></h2>
       </header>
-      <div class="portfolio-about-copy" data-reveal>
-        <p class="portfolio-about-lead">
-          I am an Electrical and Computer Engineering student at Zhejiang University and a visiting student in Prof. Huan Zhang’s research group at UIUC.
-        </p>
-        <p>
-          My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, AI, simulation, and interactive engineering education.
-        </p>
-        <div class="portfolio-focus-grid" aria-label="Research interests">
-          <article><span>01</span><h3>Multimodal AI</h3><p>Reasoning across language, vision, and interactive environments.</p></article>
-          <article><span>02</span><h3>LLM reasoning</h3><p>Reliable problem solving for technical and engineering workflows.</p></article>
-          <article><span>03</span><h3>Autonomous systems</h3><p>Simulation, control, and tools that improve how machines are tuned.</p></article>
+      <div class="portfolio-about-layout">
+        <div class="portfolio-about-copy" data-reveal>
+          <p class="portfolio-about-lead" data-i18n="about.intro">
+            I am an Electrical and Computer Engineering student at Zhejiang University and a visiting student in Prof. Huan Zhang’s research group at UIUC.
+          </p>
+          <p data-i18n="about.body">
+            My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, AI, simulation, and interactive engineering education.
+          </p>
         </div>
+        <figure class="portfolio-about-portrait" data-reveal>
+          <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Chi Zhang" data-i18n-alt="about.alt" width="520" height="650" loading="lazy" />
+        </figure>
       </div>
     </div>
   </section>
@@ -153,26 +166,22 @@ redirect_from:
   <section class="portfolio-section portfolio-news" id="news" aria-labelledby="news-title">
     <div class="portfolio-shell">
       <header class="portfolio-section-heading" data-reveal>
-        <div>
-          <p class="portfolio-section-index">03 / News</p>
-          <h2 id="news-title">Recent notes.</h2>
-        </div>
+        <h2 class="portfolio-section-index" id="news-title"><span>03 /</span> <span data-i18n="section.news">News</span></h2>
       </header>
       <ol class="portfolio-news-list" data-reveal>
-        <li><time datetime="2026-02">2026.02</time><p>Named to the <strong>FA25 Dean’s List</strong> at The Grainger College of Engineering. <a href="{{ '/files/dean_list.pdf' | relative_url }}">Certificate ↗</a></p></li>
-        <li><time datetime="2025-12">2025.12</time><p>Published the <strong>Autonomous Tracking Drone</strong> project from ECE 484. <a href="https://www.youtube.com/watch?v=8l80orgLiXs">Video ↗</a></p></li>
-        <li><time datetime="2025-08">2025.08</time><p>Joined the EIE summer school at <strong>Westlake University</strong>. <a href="https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ">Article ↗</a></p></li>
-        <li><time datetime="2025-06">2025.06</time><p>National SRTP programme rated <strong>Excellent</strong> among 24 teams.</p></li>
-        <li><time datetime="2024-11">2024.11</time><p>Received both <strong>Best Summer Research Project</strong> and <strong>Best Summer Research Poster</strong>. <a href="{{ '/files/srtp_award.pdf' | relative_url }}">Certificate ↗</a></p></li>
+        <li><time datetime="2026-02">2026.02</time><p data-i18n="news.dean">I was named to the Fall 2025 Dean’s List at The Grainger College of Engineering, University of Illinois Urbana-Champaign.</p><a href="{{ '/files/dean_list.pdf' | relative_url }}"><span data-i18n="common.certificate">Certificate</span> ↗</a></li>
+        <li><time datetime="2025-12">2025.12</time><p data-i18n="news.drone">I published the Autonomous Tracking Drone project developed for ECE 484, together with a video demonstration of the system.</p><a href="https://www.youtube.com/watch?v=8l80orgLiXs"><span data-i18n="common.video">Video</span> ↗</a></li>
+        <li><time datetime="2025-08">2025.08</time><p data-i18n="news.westlake">I participated in the EIE Summer School at Westlake University, where I explored interdisciplinary topics in electronic and information engineering.</p><a href="https://mp.weixin.qq.com/s/49DCmogXu0ha68liPvc2KQ"><span data-i18n="common.article">Article</span> ↗</a></li>
+        <li><time datetime="2025-06">2025.06</time><p data-i18n="news.srtp">Our National SRTP project received an Excellent evaluation in a cohort of 24 participating teams.</p><span aria-hidden="true"></span></li>
+        <li><time datetime="2024-11">2024.11</time><p data-i18n="news.awards">Our summer research project received both the Best Summer Research Project award and the Best Summer Research Poster award.</p><a href="{{ '/files/srtp_award.pdf' | relative_url }}"><span data-i18n="common.certificate">Certificate</span> ↗</a></li>
       </ol>
     </div>
   </section>
 
-  <section class="portfolio-contact" aria-labelledby="contact-title">
-    <div class="portfolio-shell portfolio-contact-inner" data-reveal>
-      <p class="portfolio-section-index">Let’s connect</p>
-      <h2 id="contact-title">Interested in building something technically ambitious?</h2>
-      <a href="mailto:cz005623@gmail.com">cz005623@gmail.com <span aria-hidden="true">↗</span></a>
+  <section class="portfolio-beyond" aria-labelledby="beyond-title">
+    <div class="portfolio-shell" data-reveal>
+      <h2 class="portfolio-section-index" id="beyond-title"><span>04 /</span> <span data-i18n="section.beyond">Beyond engineering</span></h2>
+      <p data-i18n="beyond.body">Outside the lab, I care about engineering education, volunteer teaching, and creating learning experiences that help students build confidence through practice.</p>
     </div>
   </section>
 </main>
