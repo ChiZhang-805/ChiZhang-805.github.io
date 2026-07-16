@@ -44,8 +44,8 @@ body {
 }
 
 .masthead__inner-wrap {
-  max-width: 1740px !important;
-  padding: 0.65rem 1.5rem;
+  max-width: 1776px !important;
+  padding: 0.65rem 3rem;
 }
 
 .greedy-nav,
@@ -89,7 +89,7 @@ body {
 }
 
 .portfolio-shell {
-  width: min(1740px, calc(100% - 48px));
+  width: min(1680px, calc(100% - 96px));
   margin-inline: auto;
 }
 
@@ -328,41 +328,44 @@ body {
 }
 
 .portfolio-social-links a {
+  --portfolio-social-color: var(--portfolio-accent);
   display: grid;
-  border: 1px solid var(--portfolio-border);
+  border: 1px solid color-mix(in srgb, var(--portfolio-social-color) 20%, var(--portfolio-border));
   border-radius: 50%;
-  color: var(--portfolio-muted);
-  background: color-mix(in srgb, var(--portfolio-surface) 84%, transparent);
+  color: var(--portfolio-social-color);
+  background: color-mix(in srgb, var(--portfolio-social-color) 7%, #fff);
+  box-shadow: 0 7px 18px rgba(26, 37, 58, 0.07);
   aspect-ratio: 1;
   place-items: center;
-  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .portfolio-social-links a:hover,
 .portfolio-social-links a:focus-visible {
-  border-color: var(--portfolio-accent);
-  color: #fff;
-  background: var(--portfolio-accent);
-  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--portfolio-social-color) 55%, transparent);
+  color: var(--portfolio-social-color);
+  background: color-mix(in srgb, var(--portfolio-social-color) 13%, #fff);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--portfolio-social-color) 18%, transparent);
+  transform: translateY(-3px) scale(1.04);
 }
 
 .portfolio-social-links svg {
-  width: 17px;
-  height: 17px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.65;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
-.portfolio-social-links .portfolio-social-mark text {
-  fill: currentColor;
-  stroke: none;
-  font-family: Arial, sans-serif;
-  font-size: 5.2px;
-  font-weight: 800;
-  letter-spacing: -0.2px;
+.portfolio-social-links .portfolio-social-link--email { --portfolio-social-color: #3567f0; }
+.portfolio-social-links .portfolio-social-link--instagram { --portfolio-social-color: #e4405f; }
+.portfolio-social-links .portfolio-social-link--x { --portfolio-social-color: #111111; }
+.portfolio-social-links .portfolio-social-link--facebook { --portfolio-social-color: #0866ff; }
+.portfolio-social-links .portfolio-social-link--linkedin { --portfolio-social-color: #0a66c2; }
+.portfolio-social-links .portfolio-social-link--xiaohongshu { --portfolio-social-color: #ff2442; }
+.portfolio-social-links .portfolio-social-link--douyin { --portfolio-social-color: #111111; }
+.portfolio-social-links .portfolio-social-link--wechat { --portfolio-social-color: #07c160; }
+
+.portfolio-social-link--douyin svg {
+  filter: drop-shadow(-1px 0 #25f4ee) drop-shadow(1px 0 #fe2c55);
 }
 
 .portfolio-section {
@@ -740,6 +743,14 @@ body {
 }
 
 @media (max-width: 980px) {
+  .masthead__inner-wrap {
+    padding-inline: 1.75rem;
+  }
+
+  .portfolio-shell {
+    width: min(100% - 56px, 1680px);
+  }
+
   .portfolio-hero {
     height: auto;
     min-height: calc(100svh - var(--portfolio-nav-height));
@@ -779,8 +790,12 @@ body {
 }
 
 @media (max-width: 720px) {
+  .masthead__inner-wrap {
+    padding-inline: 1rem;
+  }
+
   .portfolio-shell {
-    width: min(100% - 24px, 1740px);
+    width: min(100% - 32px, 1680px);
   }
 
   .portfolio-hero {
