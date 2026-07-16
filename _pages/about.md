@@ -110,7 +110,7 @@ redirect_from:
             </div>
             <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="https://binhu7.github.io/" target="_blank" rel="noopener noreferrer">Bin Hu</a></p>
             <p class="portfolio-project-description" data-i18n="project.droneDescription">
-              DroneDream is a local-first PX4 and Gazebo tuning platform that turns control-parameter search into a visual, repeatable engineering workflow. It connects experiment setup, simulation, comparison, and evidence so users can understand each tuning decision, revisit results, and move from trial and error toward confident autonomous-flight development.
+              DroneDream is a local-first PX4 and Gazebo tuning platform that turns control-parameter search into a visual, repeatable engineering workflow. It connects experiment setup, simulation, comparison, and evidence so users can understand each tuning decision, revisit results, and move from trial and error toward reliable autonomous flight.
             </p>
           </div>
         </article>
@@ -136,7 +136,7 @@ redirect_from:
             </div>
             <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Yi Youcheng</a></p>
             <p class="portfolio-project-description" data-i18n="project.raceDescription">
-              RaceCar Lab is an interactive formula-car engineering environment with a code-generated 3D vehicle, component studies, formulas, diagnostics, and bilingual learning paths. Its McLaren-inspired presentation reflects my support for McLaren and Lando Norris, while my girlfriend supports Ferrari and Charles Leclerc—turning our friendly rivalry into a personal way to explore racing engineering.
+              RaceCar Lab is an interactive formula-car engineering environment with a code-generated 3D vehicle, component studies, formulas, diagnostics, and bilingual learning paths. Its McLaren-inspired presentation reflects my support for McLaren and Lando Norris, while my girlfriend supports Ferrari and Charles Leclerc—turning our rivalry into a way to explore racing engineering.
             </p>
           </div>
         </article>
@@ -152,10 +152,10 @@ redirect_from:
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
           <p class="portfolio-about-lead" data-i18n="about.intro">
-            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Urbana-Champaign during my junior year. I value collaborative study.
+            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Urbana-Champaign during my junior year. I value collaborative practice.
           </p>
           <p data-i18n="about.body">
-            My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, artificial intelligence, simulation, and interactive engineering education, and keeps every tool grounded in real engineering practice.
+            My work is shaped by a simple question: how can complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, artificial intelligence, simulation, and interactive engineering education, and keeps every tool grounded in engineering practice.
           </p>
         </div>
         <figure class="portfolio-about-portrait" data-reveal>
