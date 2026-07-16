@@ -29,7 +29,7 @@ redirect_from:
           </div>
           <ul class="portfolio-hero-meta" aria-label="Current profile" data-i18n-aria-label="aria.currentProfile">
             <li><strong data-i18n="hero.ece">ECE</strong><span data-i18n="hero.school">ZJU–UIUC</span></li>
-            <li><strong data-i18n="hero.exchange">Exchange student</strong><span data-i18n="hero.exchangeSchool">UIC</span></li>
+            <li><strong data-i18n="hero.exchange">Exchange student</strong><span data-i18n="hero.exchangeSchool">UIUC</span></li>
             <li><strong data-i18n="hero.based">Based in</strong><span data-i18n="hero.city">Hangzhou</span></li>
           </ul>
         </div>
@@ -152,7 +152,7 @@ redirect_from:
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
           <p class="portfolio-about-lead" data-i18n="about.intro">
-            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Chicago during my junior year. I value collaborative study.
+            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Urbana-Champaign during my junior year. I value collaborative study.
           </p>
           <p data-i18n="about.body">
             My work is shaped by a simple question: how can technically complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, artificial intelligence, simulation, and interactive engineering education, and keeps every tool grounded in real engineering practice.
