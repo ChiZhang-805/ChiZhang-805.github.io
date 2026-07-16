@@ -1,4 +1,21 @@
 (function () {
+  const root = document.documentElement;
+  const masthead = document.querySelector(".masthead");
+  const hero = document.querySelector(".portfolio-hero");
+
+  const syncMastheadHeight = () => {
+    if (!masthead) return;
+    const mastheadHeight = masthead.getBoundingClientRect().height;
+    const heroDocumentTop = hero ? hero.getBoundingClientRect().top + window.scrollY : mastheadHeight;
+    root.style.setProperty("--portfolio-nav-height", `${Math.max(mastheadHeight, heroDocumentTop)}px`);
+  };
+
+  syncMastheadHeight();
+  window.addEventListener("resize", syncMastheadHeight, { passive: true });
+  if ("ResizeObserver" in window && masthead) {
+    new ResizeObserver(syncMastheadHeight).observe(masthead);
+  }
+
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 
