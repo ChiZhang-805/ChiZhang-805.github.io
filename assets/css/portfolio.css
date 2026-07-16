@@ -936,7 +936,15 @@ body {
   padding-inline: 6rem;
 }
 
-.masthead__utility-item button {
+.masthead__utility-item {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 101;
+  transform: translateY(-50%);
+}
+
+.masthead__utility-item [role="button"] {
   display: grid;
   width: 38px;
   height: 38px;
@@ -950,8 +958,8 @@ body {
   transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.masthead__utility-item button:hover,
-.masthead__utility-item button:focus-visible {
+.masthead__utility-item [role="button"]:hover,
+.masthead__utility-item [role="button"]:focus-visible {
   border-color: var(--portfolio-accent);
   color: var(--portfolio-accent);
   transform: translateY(-1px);
@@ -1417,7 +1425,7 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
     padding-inline: 1rem;
   }
 
-  .masthead__utility-item button {
+  .masthead__utility-item [role="button"] {
     width: 34px;
     height: 34px;
   }

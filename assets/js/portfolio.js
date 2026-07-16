@@ -122,7 +122,7 @@
 
   const root = document.documentElement;
   const masthead = document.querySelector(".masthead");
-  const languageButton = document.querySelector("#language-toggle button");
+  const languageButton = document.querySelector("#language-toggle [role='button']");
   let currentLanguage = "en";
 
   const readStoredLanguage = () => {
@@ -181,7 +181,13 @@
   };
 
   applyLanguage(readStoredLanguage(), false);
-  languageButton?.addEventListener("click", () => applyLanguage(currentLanguage === "en" ? "zh" : "en", true));
+  const toggleLanguage = () => applyLanguage(currentLanguage === "en" ? "zh" : "en", true);
+  languageButton?.addEventListener("click", toggleLanguage);
+  languageButton?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    toggleLanguage();
+  });
 
   const storyCard = document.querySelector("[data-photo-card]");
   const storyButton = storyCard?.querySelector(".portfolio-story-toggle");

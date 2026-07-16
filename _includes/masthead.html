@@ -16,9 +16,9 @@
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" data-nav-index="{{ forloop.index0 }}">{{ link.title }}</a></li>
           {% endfor %}
           <li id="language-toggle" class="masthead__menu-item masthead__utility-item persist tail">
-            <button type="button" aria-label="切换到中文" title="切换到中文">
+            <span role="button" tabindex="0" aria-label="切换到中文" title="切换到中文">
               <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21M12 3C9.7 5.5 8.5 8.5 8.5 12s1.2 6.5 3.5 9"></path></svg>
-            </button>
+            </span>
           </li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
