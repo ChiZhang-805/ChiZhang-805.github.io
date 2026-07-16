@@ -1,13 +1,10 @@
 (function () {
   const root = document.documentElement;
   const masthead = document.querySelector(".masthead");
-  const hero = document.querySelector(".portfolio-hero");
 
   const syncMastheadHeight = () => {
     if (!masthead) return;
-    const mastheadHeight = masthead.getBoundingClientRect().height;
-    const heroDocumentTop = hero ? hero.getBoundingClientRect().top + window.scrollY : mastheadHeight;
-    root.style.setProperty("--portfolio-nav-height", `${Math.max(mastheadHeight, heroDocumentTop)}px`);
+    root.style.setProperty("--portfolio-nav-height", `${masthead.getBoundingClientRect().height}px`);
   };
 
   syncMastheadHeight();
