@@ -140,6 +140,30 @@ redirect_from:
             </p>
           </div>
         </article>
+
+        <article class="portfolio-project-card portfolio-project-card--corevqa" data-reveal>
+          <div class="portfolio-project-media portfolio-project-media--static">
+            <img class="portfolio-project-fallback portfolio-project-fallback--contain" src="{{ '/assets/media/projects/corevqa-overview.png' | relative_url }}" alt="CoRe-VQA framework and implicit video question answering results" data-i18n-alt="project.coreAlt" width="3176" height="4174" loading="lazy" />
+          </div>
+
+          <div class="portfolio-project-copy">
+            <div class="portfolio-project-title-row">
+              <h3>CoRe-VQA</h3>
+            </div>
+            <p class="portfolio-project-byline portfolio-project-byline--authors">
+              <a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Wu Fuyang</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Zhenxi Zhang</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Shijie Li</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Yifan Wei</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Bo Gao</a><span aria-hidden="true">·</span>
+              <a href="{{ '/' | relative_url }}">Bin Li</a>
+            </p>
+            <p class="portfolio-project-description" data-i18n="project.coreDescription">
+              CoRe-VQA is a collaborative multi-agent framework for implicit video question answering that assigns contextual clue scouting, relation judging, consensus voting, and confidence-gated memory refinement to specialized roles. Now being prepared for submission to AAAI, it raises hidden-evidence I-VQA accuracy from 55.14% to 63.59% and generalizes across traffic-video, multi-label, and transfer benchmarks.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -152,7 +176,7 @@ redirect_from:
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
           <p class="portfolio-about-paragraph">
-            <span data-i18n="about.introBeforeBruce">I am a senior undergraduate student in Electrical and Computer Engineering at Zhejiang University. I spent my junior year as an exchange student at the University of Illinois Urbana-Champaign (UIUC). I am currently conducting research in </span><a class="portfolio-about-teacher-link" href="https://zjui.intl.zju.edu.cn/en/node/2384" target="_blank" rel="noopener noreferrer" data-i18n="about.bruceName">Bruce Yu</a><span data-i18n="about.introAfterBruce">'s group on human action recognition from UAV-view video, with a particular interest in understanding human behavior and temporal patterns from aerial observations.</span>
+            <span data-i18n="about.introBeforeBruce">I am a senior undergraduate student in Electrical and Computer Engineering at Zhejiang University. During my junior year, I spent an academic year as an exchange student at the University of Illinois Urbana-Champaign (UIUC). Beyond the classroom, I am currently conducting research in </span><a class="portfolio-about-teacher-link" href="https://bruceyo.github.io/" target="_blank" rel="noopener noreferrer" data-i18n="about.bruceName">Bruce Yu</a><span data-i18n="about.introAfterBruce">'s group on human action recognition from UAV-view video, with a particular interest in understanding human behavior and temporal patterns from aerial observations.</span>
           </p>
           <p class="portfolio-about-paragraph">
             <span data-i18n="about.bodyBeforeHanzhi">Previously, I completed a year-long Student Research Training Program in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/mahanzhi" target="_blank" rel="noopener noreferrer" data-i18n="about.hanzhiName">Hanzhi Ma</a><span data-i18n="about.bodyBetweenTeachers">'s group (National SRTP). My research focused on high-speed signal-channel modeling using machine learning and multi-objective optimization, and the project received an Excellent rating at its final evaluation. During the summer after my sophomore year, I also worked in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/caojixing" target="_blank" rel="noopener noreferrer" data-i18n="about.jixingName">Jixing Cao</a><span data-i18n="about.bodyAfterJixing">'s group on YOLOv11-based detection of tunnel fires and vehicle collisions.</span>

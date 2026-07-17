@@ -1253,6 +1253,15 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   transition: opacity 300ms ease;
 }
 
+.portfolio-project-media--static {
+  background: #f7fafc;
+  touch-action: auto;
+}
+
+.portfolio-project-fallback--contain {
+  object-fit: contain;
+}
+
 .portfolio-project-media canvas {
   display: block;
   opacity: 0;
@@ -1334,8 +1343,21 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   text-underline-offset: 0.2em;
 }
 
+.portfolio-project-byline--authors {
+  flex-wrap: wrap;
+  row-gap: 0.24rem;
+}
+
 .portfolio-project-card--racecar .portfolio-project-description {
   max-width: 820px;
+}
+
+.portfolio-project-card--corevqa .portfolio-project-description {
+  max-width: 890px;
+}
+
+html[lang="zh-CN"] .portfolio-project-card--corevqa .portfolio-project-description {
+  max-width: 720px;
 }
 
 .portfolio-about {
@@ -1414,7 +1436,7 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 
 .portfolio-about-teacher-link {
   color: var(--portfolio-accent);
-  font-weight: inherit;
+  font-weight: 700;
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--portfolio-accent) 38%, transparent);
   text-decoration-thickness: 1px;
