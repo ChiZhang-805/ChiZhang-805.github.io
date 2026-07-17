@@ -151,11 +151,11 @@ redirect_from:
       </header>
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
-          <p class="portfolio-about-paragraph" data-i18n="about.intro">
-            I am a senior undergraduate student in Electrical and Computer Engineering at Zhejiang University. I spent my junior year as an exchange student at the University of Illinois Urbana-Champaign (UIUC). I am currently conducting research in Bruce Yu's group on human action recognition from UAV-view video, with a particular interest in understanding human behavior and temporal patterns from aerial observations.
+          <p class="portfolio-about-paragraph">
+            <span data-i18n="about.introBeforeBruce">I am a senior undergraduate student in Electrical and Computer Engineering at Zhejiang University. I spent my junior year as an exchange student at the University of Illinois Urbana-Champaign (UIUC). I am currently conducting research in </span><a class="portfolio-about-teacher-link" href="https://zjui.intl.zju.edu.cn/en/node/2384" target="_blank" rel="noopener noreferrer" data-i18n="about.bruceName">Bruce Yu</a><span data-i18n="about.introAfterBruce">'s group on human action recognition from UAV-view video, with a particular interest in understanding human behavior and temporal patterns from aerial observations.</span>
           </p>
-          <p class="portfolio-about-paragraph" data-i18n="about.body">
-            Previously, I completed a year-long Student Research Training Program in Hanzhi Ma's group (National SRTP). My research focused on high-speed signal-channel modeling using machine learning and multi-objective optimization, and the project received an Excellent rating at its final evaluation. During the summer after my sophomore year, I also worked in Jixing Cao's group on YOLOv11-based detection of tunnel fires and vehicle collisions.
+          <p class="portfolio-about-paragraph">
+            <span data-i18n="about.bodyBeforeHanzhi">Previously, I completed a year-long Student Research Training Program in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/mahanzhi" target="_blank" rel="noopener noreferrer" data-i18n="about.hanzhiName">Hanzhi Ma</a><span data-i18n="about.bodyBetweenTeachers">'s group (National SRTP). My research focused on high-speed signal-channel modeling using machine learning and multi-objective optimization, and the project received an Excellent rating at its final evaluation. During the summer after my sophomore year, I also worked in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/caojixing" target="_blank" rel="noopener noreferrer" data-i18n="about.jixingName">Jixing Cao</a><span data-i18n="about.bodyAfterJixing">'s group on YOLOv11-based detection of tunnel fires and vehicle collisions.</span>
           </p>
           <ul class="portfolio-about-topics" aria-label="Research interests" data-i18n-aria-label="about.topicsLabel">
             <li><span class="portfolio-about-topic-label">Topic 1</span><span data-i18n="about.topic1">Multimodal video understanding</span></li>
