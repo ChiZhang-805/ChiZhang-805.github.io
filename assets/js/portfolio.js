@@ -151,7 +151,7 @@
       "journey.next": "下一张照片",
       "project.drag": "拖动旋转",
       "project.droneDescription": "DroneDream 是一个本地优先的 PX4 与 Gazebo 调参平台，将控制参数搜索转化为可视、可重复的工程流程。它连接实验设置、仿真运行、结果对比与证据整理，帮助使用者理解每一次调参决策、回看结果，并从反复试错走向更有把握的自主飞行开发。同时，平台会记录完整实验过程，使结果能够复现、比较，并成为后续开发可靠的工程依据。",
-      "project.raceDescription": "RaceCar Lab 是一个交互式方程式赛车工程环境，包含代码生成的 3D 赛车、部件研究、公式、诊断工具与双语学习路径。迈凯伦风格的展示来自我对 McLaren 和 Lando Norris 的支持，而我的女朋友支持 Ferrari 和 Charles Leclerc；这份友好的竞争也让赛车工程探索更具个人色彩，并把个人兴趣、车辆结构分析与工程学习过程更自然地连接起来，也使模型观察和参数讨论更加具体、有趣。",
+      "project.raceDescription": "RaceCar Lab 是一个交互式方程式赛车工程环境，整合代码生成的 3D 赛车、部件研究、公式、诊断工具与双语学习路径。迈凯伦风格的展示源于我对 McLaren 和 Lando Norris 的支持，而我的女朋友支持 Ferrari 和 Charles Leclerc；这份友好的竞争让我们以更具个人色彩的方式探索车辆结构、工程原理与参数变化，并让赛车学习更直观、更有趣。",
       "project.coreDescription": "CoRe-VQA 是一个面向隐式视频问答的协作式多智能体框架，将上下文线索搜索、关系判断、共识投票与置信度门控的记忆优化分别交给不同智能体。目前项目正准备投稿 AAAI，并将隐藏证据 I-VQA 的准确率从 55.14% 提升至 63.59%，同时在交通视频问答与迁移测试中展现出进一步的泛化能力，并提升不同场景下证据推理的稳定性。",
       "project.droneViewer": "可交互旋转的 DroneDream 无人机三维模型",
       "project.raceViewer": "可交互旋转的方程式赛车三维模型",

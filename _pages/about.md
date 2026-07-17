@@ -1,7 +1,6 @@
 ---
 layout: portfolio
 permalink: /
-title: "Chi Zhang — Engineer & Builder"
 excerpt: "Chi Zhang's selected projects in autonomous systems, simulation, and interactive engineering."
 author_profile: false
 redirect_from:
