@@ -1456,6 +1456,22 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   stroke-width: 1.7;
 }
 
+.portfolio-news-link--github svg {
+  width: 22px;
+  height: 22px;
+  stroke: none;
+}
+
+.portfolio-news-link--github .portfolio-github-mark {
+  fill: #181717;
+}
+
+html[data-theme="dark"] .portfolio-news-link--github .portfolio-github-mark,
+.portfolio-news-link--github:hover .portfolio-github-mark,
+.portfolio-news-link--github:focus-visible .portfolio-github-mark {
+  fill: #fff;
+}
+
 #theme-toggle a {
   font-size: 1.02rem;
 }
