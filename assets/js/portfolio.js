@@ -1,7 +1,7 @@
 (function () {
   const translations = {
     en: {
-      "page.title": "Chi Zhang — Engineer & Builder",
+      "page.title": "Chi Zhang",
       "journey.pageTitle": "My Journey — Chi Zhang",
       "nav.0": "Work",
       "nav.1": "About",
@@ -100,7 +100,7 @@
       "theme.toggle": "Toggle color theme"
     },
     zh: {
-      "page.title": "Chi Zhang — 工程与研究",
+      "page.title": "Chi Zhang",
       "journey.pageTitle": "我的经历 — Chi Zhang",
       "nav.0": "项目",
       "nav.1": "关于",
