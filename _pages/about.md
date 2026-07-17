@@ -151,12 +151,17 @@ redirect_from:
       </header>
       <div class="portfolio-about-layout">
         <div class="portfolio-about-copy" data-reveal>
-          <p class="portfolio-about-lead" data-i18n="about.intro">
-            I am an Electrical and Computer Engineering student at Zhejiang University and an exchange student at the University of Illinois Urbana-Champaign during my junior year. I value collaborative practice.
+          <p class="portfolio-about-paragraph" data-i18n="about.intro">
+            I am a senior undergraduate student in Electrical and Computer Engineering at Zhejiang University. I spent my junior year as an exchange student at the University of Illinois Urbana-Champaign (UIUC). I am currently conducting research in Bruce Yu's group on human action recognition from UAV-view video, with a particular interest in understanding human behavior and temporal patterns from aerial observations.
           </p>
-          <p data-i18n="about.body">
-            My work is shaped by a simple question: how can complex systems become easier for people to operate, evaluate, and learn from? That question connects my projects in autonomous flight, artificial intelligence, simulation, and interactive engineering education, and keeps every tool grounded in engineering practice.
+          <p class="portfolio-about-paragraph" data-i18n="about.body">
+            Previously, I completed a year-long Student Research Training Program in Hanzhi Ma's group (National SRTP). My research focused on high-speed signal-channel modeling using machine learning and multi-objective optimization, and the project received an Excellent rating at its final evaluation. During the summer after my sophomore year, I also worked in Jixing Cao's group on YOLOv11-based detection of tunnel fires and vehicle collisions.
           </p>
+          <ul class="portfolio-about-topics" aria-label="Research interests" data-i18n-aria-label="about.topicsLabel">
+            <li><span class="portfolio-about-topic-label">Topic 1</span><span data-i18n="about.topic1">Multimodal video understanding</span></li>
+            <li><span class="portfolio-about-topic-label">Topic 2</span><span data-i18n="about.topic2">UAV vision and control</span></li>
+            <li><span class="portfolio-about-topic-label">Topic 3</span><span data-i18n="about.topic3">Multi-agent coordination</span></li>
+          </ul>
         </div>
         <figure class="portfolio-about-portrait" data-reveal>
           <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Portrait of Chi Zhang" data-i18n-alt="about.alt" width="520" height="650" loading="lazy" />
