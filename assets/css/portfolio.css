@@ -1340,7 +1340,12 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 }
 
 .portfolio-about {
+  padding-block: clamp(72px, 6.5vw, 112px);
   background: var(--portfolio-bg);
+}
+
+.portfolio-about .portfolio-section-heading {
+  margin-bottom: clamp(1.2rem, 2.5vw, 2.3rem);
 }
 
 .portfolio-about-layout {
@@ -1614,6 +1619,10 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 
   .portfolio-project-media {
     width: 100%;
+  }
+
+  .portfolio-about {
+    padding-block: 56px;
   }
 
   html[lang="zh-CN"] .portfolio-hero-copy h1 {
