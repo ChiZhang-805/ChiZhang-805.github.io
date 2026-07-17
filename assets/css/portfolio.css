@@ -1028,13 +1028,13 @@ body {
 }
 
 .portfolio-hero-meta li + li {
-  padding-left: 1rem;
+  padding-left: calc(1rem - 1px);
   border-left: 1px solid var(--portfolio-border);
 }
 
 .portfolio-hero-meta li:last-child {
   padding-right: 0;
-  justify-self: end;
+  justify-self: start;
   text-align: left;
 }
 
