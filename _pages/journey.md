@@ -15,7 +15,6 @@ author_profile: false
       </a>
       <p class="journey-kicker" data-i18n="journey.kicker">Places, people, and moments beyond the project list</p>
       <h1 id="journey-page-title" data-i18n="section.journey">My Journey</h1>
-      <p class="journey-intro" data-i18n="journey.intro">Engineering shapes how I solve problems; these experiences shape how I see people, places, and learning.</p>
     </div>
   </section>
 
@@ -23,7 +22,6 @@ author_profile: false
     <div class="portfolio-shell">
       <header class="journey-archive-heading" data-reveal>
         <h2 id="journey-archive-title" data-i18n="journey.archiveTitle">Experiences</h2>
-        <span data-i18n="journey.archiveHint">Select an experience to open its photo story.</span>
       </header>
 
       <div class="journey-archive-grid">
