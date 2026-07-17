@@ -1,5 +1,13 @@
 {% include base_path %}
 
+<style>
+  .site-theme-icon, .site-footer-icon { display: inline-block; flex: none; vertical-align: -0.12em; }
+  .site-footer-icon { fill: currentColor; }
+  [data-theme-icon-moon] { display: none; }
+  html[data-theme="dark"] [data-theme-icon-sun] { display: none; }
+  html[data-theme="dark"] [data-theme-icon-moon] { display: block; }
+</style>
+
 <!-- start custom head snippets -->
 
 <!-- Support for Academicons -->
@@ -15,6 +23,13 @@
 {% if page.layout == "portfolio" %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/portfolio.css"/>
 <meta name="theme-color" content="#f5f7fb"/>
+{% if page.url == "/" %}
+<link rel="preload" as="image" type="image/webp"
+      href="{{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }}"
+      imagesrcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
+      imagesizes="(max-width: 820px) calc(100vw - 64px), 40vw"
+      fetchpriority="high"/>
+{% endif %}
 {% else %}
 <meta name="theme-color" content="#ffffff"/>
 {% endif %}

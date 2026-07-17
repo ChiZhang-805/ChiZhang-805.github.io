@@ -1593,6 +1593,31 @@ html[data-theme="dark"] .portfolio-news-link--github .portfolio-github-mark,
   flex: 1 0 auto;
 }
 
+@supports (content-visibility: auto) {
+  .portfolio-work,
+  .portfolio-about,
+  .portfolio-news,
+  .portfolio-journey {
+    content-visibility: auto;
+  }
+
+  .portfolio-work {
+    contain-intrinsic-block-size: auto 1450px;
+  }
+
+  .portfolio-about {
+    contain-intrinsic-block-size: auto 760px;
+  }
+
+  .portfolio-news {
+    contain-intrinsic-block-size: auto 900px;
+  }
+
+  .portfolio-journey {
+    contain-intrinsic-block-size: auto 660px;
+  }
+}
+
 .portfolio-page .page__footer {
   position: static;
   float: none;

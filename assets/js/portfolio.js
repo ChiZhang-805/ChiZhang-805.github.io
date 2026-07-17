@@ -252,7 +252,7 @@
       languageButton.title = dictionary["language.switch"];
     }
     const themeIcon = document.querySelector("#theme-icon");
-    if (themeIcon) themeIcon.title = dictionary["theme.toggle"];
+    if (themeIcon) themeIcon.setAttribute("title", dictionary["theme.toggle"]);
 
     if (persist) {
       try {
@@ -307,5 +307,13 @@
       { rootMargin: "0px 0px -8%", threshold: 0.12 }
     );
     revealItems.forEach((item) => observer.observe(item));
+  }
+
+  if ("serviceWorker" in navigator && window.isSecureContext) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js", { scope: "/", updateViaCache: "none" }).catch(() => {
+        // The portfolio remains fully functional when service workers are unavailable.
+      });
+    }, { once: true });
   }
 })();
