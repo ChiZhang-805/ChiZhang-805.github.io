@@ -6,6 +6,7 @@
       "nav.0": "Work",
       "nav.1": "About",
       "nav.2": "News",
+      "nav.3": "Resume",
       "hero.titleLine1": "Making complex",
       "hero.titleLine2": "engineering",
       "hero.titleAccent": "visible.",
@@ -91,6 +92,7 @@
       "nav.0": "项目",
       "nav.1": "关于",
       "nav.2": "动态",
+      "nav.3": "简历",
       "hero.titleLine1": "让复杂工程",
       "hero.titleLine2": "变得",
       "hero.titleAccent": "清晰可见。",
@@ -214,6 +216,10 @@
       const value = dictionary[`nav.${link.dataset.navIndex}`];
       if (value) link.textContent = value;
     });
+    const resumeLink = document.querySelector("[data-resume-link]");
+    if (resumeLink) {
+      resumeLink.href = currentLanguage === "zh" ? resumeLink.dataset.resumeZh : resumeLink.dataset.resumeEn;
+    }
 
     if (languageButton) {
       languageButton.setAttribute("aria-label", dictionary["language.switch"]);
