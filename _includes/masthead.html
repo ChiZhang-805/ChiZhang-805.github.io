@@ -13,7 +13,9 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" data-nav-index="{{ forloop.index0 }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ domain }}{{ link.url }}" data-nav-index="{{ forloop.index0 }}"{% if link.resume %} data-resume-link data-resume-en="{{ '/files/resume-en.pdf' | relative_url }}" data-resume-zh="{{ '/files/resume-zh.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a>
+            </li>
           {% endfor %}
           <li id="language-toggle" class="masthead__menu-item masthead__utility-item persist tail">
             <span role="button" tabindex="0" aria-label="切换到中文" title="切换到中文">

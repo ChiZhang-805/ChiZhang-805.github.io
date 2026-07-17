@@ -60,7 +60,7 @@ body {
 
 .masthead__menu-item:not(.masthead__menu-item--lg) a {
   color: var(--portfolio-muted);
-  font-size: 0.78rem;
+  font-size: 0.86rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -68,6 +68,8 @@ body {
 
 .masthead__menu-item--lg a {
   color: var(--portfolio-ink);
+  font-size: 1.08rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
@@ -946,8 +948,8 @@ body {
 
 .masthead__utility-item [role="button"] {
   display: grid;
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   padding: 0;
   border: 1px solid var(--portfolio-border);
   border-radius: 50%;
@@ -966,8 +968,8 @@ body {
 }
 
 .masthead__utility-item svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   fill: none;
   stroke: currentColor;
   stroke-linecap: round;
@@ -1345,14 +1347,14 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 }
 
 .portfolio-about .portfolio-section-heading {
-  margin-bottom: clamp(1.2rem, 2.5vw, 2.3rem);
+  margin-bottom: clamp(0.6rem, 1.2vw, 1.15rem);
 }
 
 .portfolio-about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.55fr);
   gap: clamp(56px, 9vw, 150px);
-  align-items: center;
+  align-items: start;
 }
 
 .portfolio-about-copy {
@@ -1385,7 +1387,7 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 
 .portfolio-about-portrait {
   overflow: hidden;
-  margin: 0;
+  margin: clamp(-72px, -3vw, -48px) 0 0;
   border: 1px solid var(--portfolio-border);
   background: var(--portfolio-surface);
   box-shadow: var(--portfolio-shadow);
@@ -1452,6 +1454,10 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.7;
+}
+
+#theme-toggle a {
+  font-size: 1.02rem;
 }
 
 .portfolio-beyond {
@@ -1550,6 +1556,7 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 
   .portfolio-about-portrait {
     width: min(100%, 390px);
+    margin-top: 0;
   }
 
   .portfolio-beyond .portfolio-shell {
@@ -1562,9 +1569,30 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
     padding-inline: 1rem;
   }
 
+  .greedy-nav .visible-links .masthead__menu-item a {
+    margin-inline: 0.15rem !important;
+    padding-inline: 0 !important;
+  }
+
+  .masthead__menu-item--lg a {
+    font-size: 0.98rem;
+    margin-left: 0 !important;
+    margin-right: 0.3rem !important;
+    white-space: nowrap;
+  }
+
+  .masthead__menu-item:not(.masthead__menu-item--lg) a {
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+  }
+
+  #theme-toggle {
+    display: none;
+  }
+
   .masthead__utility-item [role="button"] {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
   }
 
   .portfolio-shell {

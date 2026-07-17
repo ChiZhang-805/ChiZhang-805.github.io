@@ -14,6 +14,9 @@ main:
     url: /#about
   - title: "News"
     url: /#news
+  - title: "Resume"
+    url: /files/resume-en.pdf
+    resume: true
 
   # - title: "CV"
   #   url: /cv-json/
