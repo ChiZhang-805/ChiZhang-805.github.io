@@ -143,21 +143,22 @@ redirect_from:
 
         <article class="portfolio-project-card portfolio-project-card--corevqa" data-reveal>
           <div class="portfolio-project-media portfolio-project-media--static">
-            <img class="portfolio-project-fallback portfolio-project-fallback--contain" src="{{ '/assets/media/projects/corevqa-overview.png' | relative_url }}" alt="CoRe-VQA framework and implicit video question answering results" data-i18n-alt="project.coreAlt" width="3176" height="4174" loading="lazy" />
+            <img class="portfolio-project-fallback portfolio-project-fallback--contain" src="{{ '/assets/media/projects/corevqa-overview.png' | relative_url }}" alt="CoRe-VQA framework and implicit video question answering results" data-i18n-alt="project.coreAlt" width="2400" height="2400" loading="lazy" />
           </div>
 
           <div class="portfolio-project-copy">
             <div class="portfolio-project-title-row">
-              <h3>CoRe-VQA</h3>
+              <h3><span>CoRe-VQA: Collaborative Agentic Reasoning</span> <span>for Implicit Video Question Answering</span></h3>
             </div>
             <p class="portfolio-project-byline portfolio-project-byline--authors">
               <a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Wu Fuyang</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Zhenxi Zhang</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Shijie Li</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Yifan Wei</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Bo Gao</a><span aria-hidden="true">·</span>
-              <a href="{{ '/' | relative_url }}">Bin Li</a>
+              <a href="https://openreview.net/profile?id=~Wu_Fuyang1" target="_blank" rel="noopener noreferrer">Wu Fuyang</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Meimei_Zhang4" target="_blank" rel="noopener noreferrer">Meimei Zhang</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Zhenxi_Zhang2" target="_blank" rel="noopener noreferrer">Zhenxi Zhang</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~ShiJie_Li18" target="_blank" rel="noopener noreferrer">Shijie Li</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Yifan_Wei1" target="_blank" rel="noopener noreferrer">Yifan Wei</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Bo_Gao11" target="_blank" rel="noopener noreferrer">Bo Gao</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Bin_Li14" target="_blank" rel="noopener noreferrer">Bin Li</a>
             </p>
             <p class="portfolio-project-description" data-i18n="project.coreDescription">
               CoRe-VQA is a collaborative multi-agent framework for implicit video question answering that assigns contextual clue scouting, relation judging, consensus voting, and confidence-gated memory refinement to specialized roles. Now being prepared for submission to AAAI, it raises hidden-evidence I-VQA accuracy from 55.14% to 63.59% and generalizes across traffic-video, multi-label, and transfer benchmarks.
