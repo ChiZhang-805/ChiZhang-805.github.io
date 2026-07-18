@@ -169,7 +169,7 @@ redirect_from:
               <a href="https://openreview.net/profile?id=~Bin_Li14" target="_blank" rel="noopener noreferrer">Bin Li</a>
             </p>
             <p class="portfolio-project-description" data-i18n="project.coreDescription">
-              CoRe-VQA is a collaborative multi-agent framework for implicit video question answering that assigns contextual clue scouting, relation judging, consensus voting, and confidence-gated memory refinement to specialized roles. Now being prepared for submission to AAAI, it raises hidden-evidence I-VQA accuracy from 55.14% to 63.59% and generalizes across traffic-video, multi-label, and transfer benchmarks.
+              CoRe-VQA is a collaborative multi-agent framework for implicit video question answering. It separates clue scouting, relation judging, consensus voting, and confidence-gated memory refinement into specialized roles. Prepared for AAAI submission, it improves hidden-evidence I-VQA accuracy from 55.14% to 63.59% across traffic-video and transfer benchmarks.
             </p>
           </div>
         </article>
