@@ -137,7 +137,7 @@ redirect_from:
                 </a>
               </div>
             </div>
-            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Yi Youcheng</a></p>
+            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Yiyou Cheng</a></p>
             <p class="portfolio-project-description" data-i18n="project.raceDescription">
               RaceCar Lab is an interactive formula-car engineering environment with a code-generated 3D vehicle, component studies, formulas, diagnostics, and bilingual learning paths. Its McLaren-inspired presentation reflects my support for McLaren and Lando Norris, while my girlfriend supports Ferrari and Charles Leclerc—turning our rivalry into a way to explore racing engineering.
             </p>
@@ -160,7 +160,7 @@ redirect_from:
             </div>
             <p class="portfolio-project-byline portfolio-project-byline--authors">
               <a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true">·</span>
-              <a href="https://openreview.net/profile?id=~Wu_Fuyang1" target="_blank" rel="noopener noreferrer">Wu Fuyang</a><span aria-hidden="true">·</span>
+              <a href="https://openreview.net/profile?id=~Wu_Fuyang1" target="_blank" rel="noopener noreferrer">Fuyang Wu</a><span aria-hidden="true">·</span>
               <a href="https://openreview.net/profile?id=~Meimei_Zhang4" target="_blank" rel="noopener noreferrer">Meimei Zhang</a><span aria-hidden="true">·</span>
               <a href="https://openreview.net/profile?id=~Zhenxi_Zhang2" target="_blank" rel="noopener noreferrer">Zhenxi Zhang</a><span aria-hidden="true">·</span>
               <a href="https://openreview.net/profile?id=~ShiJie_Li18" target="_blank" rel="noopener noreferrer">Shijie Li</a><span aria-hidden="true">·</span>
