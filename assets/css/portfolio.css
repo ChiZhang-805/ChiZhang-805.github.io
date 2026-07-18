@@ -1687,36 +1687,36 @@ html[data-theme="dark"] .portfolio-news-link--github .portfolio-github-mark,
   fill: currentColor;
 }
 
-.portfolio-footer-social--email {
+.portfolio-footer-social .portfolio-footer-social--email {
   --portfolio-footer-social-color: #4c7df0;
 }
 
-.portfolio-footer-social--instagram {
+.portfolio-footer-social .portfolio-footer-social--instagram {
   --portfolio-footer-social-color: #e4407f;
 }
 
-.portfolio-footer-social--x,
-.portfolio-footer-social--github {
+.portfolio-footer-social .portfolio-footer-social--x,
+.portfolio-footer-social .portfolio-footer-social--github {
   --portfolio-footer-social-color: var(--portfolio-ink);
 }
 
-.portfolio-footer-social--facebook {
+.portfolio-footer-social .portfolio-footer-social--facebook {
   --portfolio-footer-social-color: #1877f2;
 }
 
-.portfolio-footer-social--linkedin {
+.portfolio-footer-social .portfolio-footer-social--linkedin {
   --portfolio-footer-social-color: #0a66c2;
 }
 
-.portfolio-footer-social--xiaohongshu {
+.portfolio-footer-social .portfolio-footer-social--xiaohongshu {
   --portfolio-footer-social-color: #ff2442;
 }
 
-.portfolio-footer-social--douyin {
+.portfolio-footer-social .portfolio-footer-social--douyin {
   --portfolio-footer-social-color: #0fd3d9;
 }
 
-.portfolio-footer-social--wechat {
+.portfolio-footer-social .portfolio-footer-social--wechat {
   --portfolio-footer-social-color: #21c363;
 }
 
