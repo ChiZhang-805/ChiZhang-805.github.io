@@ -1366,7 +1366,7 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   letter-spacing: -0.065em;
   line-height: 0.9;
   text-shadow: 0 3px 18px rgba(248, 253, 255, 0.62);
-  transform: translate(-52%, -50%);
+  transform: translate(-50%, -50%);
   white-space: nowrap;
 }
 
