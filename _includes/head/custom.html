@@ -11,7 +11,9 @@
 <!-- start custom head snippets -->
 
 <!-- Support for Academicons -->
+{% unless page.layout == "portfolio" %}
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
+{% endunless %}
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
@@ -24,9 +26,9 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/portfolio.css?v=20260719-nava-center"/>
 <meta name="theme-color" content="#f5f7fb"/>
 {% if page.url == "/" %}
-<link rel="preload" as="image" type="image/webp"
-      href="{{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }}"
-      imagesrcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
+<link rel="preload" as="image" type="image/avif"
+      href="{{ '/assets/media/journey/meitan/meitan-01-1200.avif' | relative_url }}"
+      imagesrcset="{{ '/assets/media/journey/meitan/meitan-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.avif' | relative_url }} 1200w"
       imagesizes="(max-width: 820px) calc(100vw - 64px), 40vw"
       fetchpriority="high"/>
 {% endif %}

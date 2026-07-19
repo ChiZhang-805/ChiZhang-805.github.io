@@ -331,8 +331,10 @@
 
     let frame = 0;
     let running = false;
+    let inViewport = false;
     let width = 0;
     let height = 0;
+    let baseGradient = null;
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
     const accents = [
       { phase: 0.1, color: "rgba(239, 252, 255, 0.82)", amplitude: 0.16 },
@@ -347,12 +349,16 @@
       height = Math.max(1, Math.round(rect.height));
       const scaledWidth = Math.round(width * pixelRatio);
       const scaledHeight = Math.round(height * pixelRatio);
-      if (canvas.width === scaledWidth && canvas.height === scaledHeight) return;
+      if (canvas.width === scaledWidth && canvas.height === scaledHeight && baseGradient) return;
       canvas.width = scaledWidth;
       canvas.height = scaledHeight;
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+      baseGradient = context.createLinearGradient(0, 0, width, height);
+      baseGradient.addColorStop(0, "#e5f7ff");
+      baseGradient.addColorStop(0.42, "#6fc4eb");
+      baseGradient.addColorStop(1, "#0a4978");
     };
 
     const heartbeatSignal = (phase) => {
@@ -425,11 +431,7 @@
       resize();
       context.clearRect(0, 0, width, height);
 
-      const base = context.createLinearGradient(0, 0, width, height);
-      base.addColorStop(0, "#e5f7ff");
-      base.addColorStop(0.42, "#6fc4eb");
-      base.addColorStop(1, "#0a4978");
-      context.fillStyle = base;
+      context.fillStyle = baseGradient;
       context.fillRect(0, 0, width, height);
 
       for (let i = 0; i < 5; i += 1) {
@@ -476,12 +478,14 @@
     };
 
     const start = () => {
-      if (running) return;
+      container.classList.add("is-motion-active");
+      if (running || document.hidden) return;
       running = true;
       draw(performance.now());
     };
 
     const stop = () => {
+      container.classList.remove("is-motion-active");
       running = false;
       if (frame) window.cancelAnimationFrame(frame);
       frame = 0;
@@ -498,7 +502,8 @@
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) start();
+            inViewport = entry.isIntersecting;
+            if (inViewport) start();
             else stop();
           });
         },
@@ -506,8 +511,14 @@
       );
       observer.observe(container);
     } else {
+      inViewport = true;
       start();
     }
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stop();
+      else if (inViewport) start();
+    });
   };
 
   document.querySelectorAll("[data-nava-rhythm-card]").forEach(initializeNavaRhythmCard);

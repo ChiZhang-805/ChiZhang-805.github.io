@@ -34,6 +34,7 @@
   };
 
   const image = modal.querySelector("[data-gallery-image]");
+  const imageSource = modal.querySelector("[data-gallery-source]");
   const title = modal.querySelector("#journey-modal-title");
   const caption = modal.querySelector("[data-gallery-caption]");
   const counter = modal.querySelector("[data-gallery-counter]");
@@ -46,28 +47,65 @@
   let trigger = null;
   let touchStartX = null;
   let closeTimer = null;
+  let imageLoadToken = 0;
+  const decodedPhotos = new Map();
 
   const getLanguage = () => document.documentElement.dataset.language === "zh" ? "zh" : "en";
 
-  const render = () => {
+  const loadDecodedImage = (url) => new Promise((resolve, reject) => {
+    const candidate = new Image();
+    candidate.decoding = "async";
+    candidate.onload = async () => {
+      try {
+        if (candidate.decode) await candidate.decode();
+      } catch (_error) {
+        // A completed load is still safe to display when decode() is unavailable.
+      }
+      resolve(url);
+    };
+    candidate.onerror = reject;
+    candidate.src = url;
+  });
+
+  const preloadPhoto = (webpUrl) => {
+    if (decodedPhotos.has(webpUrl)) return decodedPhotos.get(webpUrl);
+    const avifUrl = webpUrl.replace(/\.webp$/i, ".avif");
+    const request = loadDecodedImage(avifUrl)
+      .then(() => ({ avifUrl, webpUrl }))
+      .catch(() => loadDecodedImage(webpUrl).then(() => ({ avifUrl: "", webpUrl })));
+    decodedPhotos.set(webpUrl, request);
+    return request;
+  };
+
+  const render = async () => {
     if (!activeGallery) return;
     const gallery = galleries[activeGallery];
+    const galleryKey = activeGallery;
+    const index = activeIndex;
     const language = getLanguage();
     const galleryTitle = gallery.title[language];
     const total = gallery.photos.length;
-    image.src = gallery.photos[activeIndex];
-    image.alt = language === "zh"
-      ? `${galleryTitle}，第 ${activeIndex + 1} 张照片，共 ${total} 张`
-      : `${galleryTitle}, photo ${activeIndex + 1} of ${total}`;
     title.textContent = galleryTitle;
     caption.textContent = galleryTitle;
     counter.textContent = language === "zh"
-      ? `${String(activeIndex + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`
-      : `${String(activeIndex + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+      ? `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`
+      : `${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+
+    const token = ++imageLoadToken;
+    const photo = await preloadPhoto(gallery.photos[index]);
+    if (token !== imageLoadToken || activeGallery !== galleryKey || activeIndex !== index) return;
+    if (photo.avifUrl) imageSource.srcset = photo.avifUrl;
+    else imageSource.removeAttribute("srcset");
+    image.src = photo.webpUrl;
+    image.alt = language === "zh"
+      ? `${galleryTitle}，第 ${index + 1} 张照片，共 ${total} 张`
+      : `${galleryTitle}, photo ${index + 1} of ${total}`;
+    image.classList.remove("is-entering");
+    void image.offsetWidth;
+    image.classList.add("is-entering");
 
     [-1, 1].forEach((offset) => {
-      const adjacent = new Image();
-      adjacent.src = gallery.photos[(activeIndex + offset + total) % total];
+      preloadPhoto(gallery.photos[(index + offset + total) % total]).catch(() => undefined);
     });
   };
 
@@ -75,9 +113,6 @@
     if (!activeGallery) return;
     const total = galleries[activeGallery].photos.length;
     activeIndex = (activeIndex + step + total) % total;
-    image.classList.remove("is-entering");
-    void image.offsetWidth;
-    image.classList.add("is-entering");
     render();
   };
 
@@ -102,6 +137,8 @@
     modal.classList.remove("is-open");
     document.body.classList.remove("journey-modal-open");
     activeGallery = null;
+    imageLoadToken += 1;
+    imageSource.removeAttribute("srcset");
     image.removeAttribute("src");
     window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
     closeTimer = window.setTimeout(() => {
