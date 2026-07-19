@@ -26,11 +26,14 @@ author_profile: false
 
       <div class="journey-archive-grid">
         <button class="journey-card journey-card--archive" type="button" data-gallery="meitan" data-reveal aria-label="Open Teaching in Meitan, Guizhou Province gallery" data-i18n-aria-label="journey.openMeitan">
-          <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Volunteer teaching group with students in Meitan, Guizhou Province" data-i18n-alt="journey.meitanAlt"
-               width="1200" height="900" loading="eager" decoding="async" fetchpriority="high" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/meitan/meitan-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Volunteer teaching group with students in Meitan, Guizhou Province" data-i18n-alt="journey.meitanAlt"
+                 width="1200" height="900" loading="eager" decoding="async" fetchpriority="high" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-index">01</span>
           <span class="journey-card-title" data-i18n="journey.meitanTitle">Teaching in Meitan, Guizhou Province</span>
@@ -38,11 +41,14 @@ author_profile: false
         </button>
 
         <button class="journey-card journey-card--archive" type="button" data-gallery="ece484" data-reveal aria-label="Open ECE 484 Autonomous Tracking Drone gallery" data-i18n-aria-label="journey.openEce">
-          <img src="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Drone flight-testing facility for ECE 484" data-i18n-alt="journey.eceAlt"
-               width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/ece484/ece484-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Drone flight-testing facility for ECE 484" data-i18n-alt="journey.eceAlt"
+                 width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-index">02</span>
           <span class="journey-card-title" data-i18n="journey.eceTitle">ECE 484 — Autonomous Tracking Drone</span>
@@ -50,11 +56,14 @@ author_profile: false
         </button>
 
         <button class="journey-card journey-card--archive" type="button" data-gallery="chicago" data-reveal aria-label="Open A Journey Through Chicago gallery" data-i18n-aria-label="journey.openChicago">
-          <img src="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Cloud Gate in Chicago framed by trees" data-i18n-alt="journey.chicagoAlt"
-               width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/chicago/chicago-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Cloud Gate in Chicago framed by trees" data-i18n-alt="journey.chicagoAlt"
+                 width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-index">03</span>
           <span class="journey-card-title" data-i18n="journey.chicagoTitle">A Journey Through Chicago</span>
@@ -82,7 +91,10 @@ author_profile: false
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
         </button>
         <figure>
-          <img data-gallery-image alt="" decoding="async" fetchpriority="high" />
+          <picture class="journey-modal-picture">
+            <source data-gallery-source type="image/avif" />
+            <img data-gallery-image alt="" decoding="async" fetchpriority="high" />
+          </picture>
           <figcaption id="journey-modal-caption">
             <span data-gallery-caption></span>
             <span data-gallery-counter></span>

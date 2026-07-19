@@ -422,6 +422,10 @@ function initializeViewer(container) {
   model.scale.setScalar(type === "drone" ? 1.08 : 0.88);
   model.position.y = type === "drone" ? 0.55 : -0.1;
   scene.add(model);
+  const animatedParts = [];
+  model.traverse((child) => {
+    if (child.userData.rotor || child.userData.wheel) animatedParts.push(child);
+  });
 
   const platform = new THREE.Mesh(
     new THREE.CylinderGeometry(type === "drone" ? 3.4 : 3.7, type === "drone" ? 3.6 : 3.9, 0.16, 64),
@@ -461,12 +465,10 @@ function initializeViewer(container) {
     if (type === "drone") {
       model.position.y = 0.55 + (reducedMotion.matches ? 0 : Math.sin(time * 0.00135) * 0.08);
     }
-    if (!reducedMotion.matches) {
-      model.traverse((child) => {
-        if (child.userData.rotor) child.rotation.y += 0.24;
-        if (child.userData.wheel) child.rotation.x += 0.025;
-      });
-    }
+    if (!reducedMotion.matches) animatedParts.forEach((child) => {
+      if (child.userData.rotor) child.rotation.y += 0.24;
+      if (child.userData.wheel) child.rotation.x += 0.025;
+    });
     renderer.render(scene, camera);
     frame = window.requestAnimationFrame(render);
   };

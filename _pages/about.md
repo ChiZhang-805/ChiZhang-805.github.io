@@ -39,11 +39,16 @@ redirect_from:
           <button class="portfolio-story-toggle" type="button" aria-pressed="false" aria-label="Flip the photo to read the volunteer teaching story" data-i18n-aria-label="story.flipLabel">
             <span class="portfolio-story-inner">
               <span class="portfolio-story-face portfolio-story-face--front">
-                <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
-                     srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
-                     sizes="(max-width: 820px) calc(100vw - 64px), 40vw"
-                     alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou Province" data-i18n-alt="story.alt"
-                     width="1200" height="900" loading="eager" decoding="async" fetchpriority="high" />
+                <picture class="portfolio-media-picture">
+                  <source type="image/avif"
+                          srcset="{{ '/assets/media/journey/meitan/meitan-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.avif' | relative_url }} 1200w"
+                          sizes="(max-width: 820px) calc(100vw - 64px), 40vw" />
+                  <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
+                       srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
+                       sizes="(max-width: 820px) calc(100vw - 64px), 40vw"
+                       alt="Chi Zhang and classmates with students during volunteer teaching in Meitan, Guizhou Province" data-i18n-alt="story.alt"
+                       width="1200" height="900" loading="eager" decoding="async" fetchpriority="high" />
+                </picture>
                 <span class="portfolio-story-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5"></path><path d="M18.4 9A7 7 0 0 0 6.2 6.2L4 8M5.6 15A7 7 0 0 0 17.8 17.8L20 16"></path></svg><span data-i18n="story.hint">Click to learn more</span></span>
               </span>
               <span class="portfolio-story-face portfolio-story-face--back">
@@ -94,7 +99,10 @@ redirect_from:
       <div class="portfolio-project-list">
         <article class="portfolio-project-card portfolio-project-card--drone" data-reveal>
           <div class="portfolio-project-media" data-project-viewer="drone" aria-label="Interactive 3D DroneDream quadcopter" data-i18n-aria-label="project.droneViewer">
-            <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/dronedream-poster.webp' | relative_url }}" alt="DroneDream quadcopter in a simulation scene" data-i18n-alt="project.droneAlt" width="760" height="760" loading="lazy" />
+            <picture class="portfolio-project-picture">
+              <source type="image/avif" srcset="{{ '/assets/media/projects/dronedream-poster.avif' | relative_url }}" />
+              <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/dronedream-poster.webp' | relative_url }}" alt="DroneDream quadcopter in a simulation scene" data-i18n-alt="project.droneAlt" width="760" height="760" loading="lazy" decoding="async" fetchpriority="low" />
+            </picture>
             <canvas aria-hidden="true"></canvas>
             <span class="portfolio-model-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8z"></path><path d="m8 8 4-3 4 3M16 16l-4 3-4-3"></path></svg><span data-i18n="project.drag">Drag to rotate</span></span>
           </div>
@@ -120,7 +128,10 @@ redirect_from:
 
         <article class="portfolio-project-card portfolio-project-card--racecar" data-reveal>
           <div class="portfolio-project-media" data-project-viewer="racecar" aria-label="Interactive 3D formula race car" data-i18n-aria-label="project.raceViewer">
-            <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/racecar-lab.webp' | relative_url }}" alt="Formula race car in RaceCar Lab" data-i18n-alt="project.raceAlt" width="760" height="760" loading="lazy" />
+            <picture class="portfolio-project-picture">
+              <source type="image/avif" srcset="{{ '/assets/media/projects/racecar-lab.avif' | relative_url }}" />
+              <img class="portfolio-project-fallback" src="{{ '/assets/media/projects/racecar-lab.webp' | relative_url }}" alt="Formula race car in RaceCar Lab" data-i18n-alt="project.raceAlt" width="760" height="760" loading="lazy" decoding="async" fetchpriority="low" />
+            </picture>
             <canvas aria-hidden="true"></canvas>
             <span class="portfolio-model-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8z"></path><path d="m8 8 4-3 4 3M16 16l-4 3-4-3"></path></svg><span data-i18n="project.drag">Drag to rotate</span></span>
           </div>
@@ -146,12 +157,17 @@ redirect_from:
 
         <article class="portfolio-project-card portfolio-project-card--corevqa" data-reveal>
           <div class="portfolio-project-media portfolio-project-media--static">
-            <img class="portfolio-project-fallback portfolio-project-fallback--contain"
-                 src="{{ '/assets/media/projects/corevqa-overview-760.webp' | relative_url }}"
-                 srcset="{{ '/assets/media/projects/corevqa-overview-760.webp' | relative_url }} 760w, {{ '/assets/media/projects/corevqa-overview-1200.webp' | relative_url }} 1200w"
-                 sizes="(max-width: 820px) calc(100vw - 64px), 340px"
-                 alt="CoRe-VQA framework and implicit video question answering results" data-i18n-alt="project.coreAlt"
-                 width="1200" height="1200" loading="lazy" decoding="async" fetchpriority="low" />
+            <picture class="portfolio-project-picture">
+              <source type="image/avif"
+                      srcset="{{ '/assets/media/projects/corevqa-overview-760.avif' | relative_url }} 760w, {{ '/assets/media/projects/corevqa-overview-1200.avif' | relative_url }} 1200w"
+                      sizes="(max-width: 820px) calc(100vw - 64px), 340px" />
+              <img class="portfolio-project-fallback portfolio-project-fallback--contain"
+                   src="{{ '/assets/media/projects/corevqa-overview-760.webp' | relative_url }}"
+                   srcset="{{ '/assets/media/projects/corevqa-overview-760.webp' | relative_url }} 760w, {{ '/assets/media/projects/corevqa-overview-1200.webp' | relative_url }} 1200w"
+                   sizes="(max-width: 820px) calc(100vw - 64px), 340px"
+                   alt="CoRe-VQA framework and implicit video question answering results" data-i18n-alt="project.coreAlt"
+                   width="1200" height="1200" loading="lazy" decoding="async" fetchpriority="low" />
+            </picture>
           </div>
 
           <div class="portfolio-project-copy">
@@ -237,11 +253,16 @@ redirect_from:
           </ul>
         </div>
         <figure class="portfolio-about-portrait" data-reveal>
-          <img src="{{ '/assets/media/profile/profile-640.webp' | relative_url }}"
-               srcset="{{ '/assets/media/profile/profile-640.webp' | relative_url }} 640w, {{ '/assets/media/profile/profile-1040.webp' | relative_url }} 1040w"
-               sizes="(max-width: 820px) 390px, 420px"
-               alt="Portrait of Chi Zhang" data-i18n-alt="about.alt"
-               width="1040" height="1574" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="portfolio-media-picture">
+            <source type="image/avif"
+                    srcset="{{ '/assets/media/profile/profile-640.avif' | relative_url }} 640w, {{ '/assets/media/profile/profile-1040.avif' | relative_url }} 1040w"
+                    sizes="(max-width: 820px) 390px, 420px" />
+            <img src="{{ '/assets/media/profile/profile-640.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/profile/profile-640.webp' | relative_url }} 640w, {{ '/assets/media/profile/profile-1040.webp' | relative_url }} 1040w"
+                 sizes="(max-width: 820px) 390px, 420px"
+                 alt="Portrait of Chi Zhang" data-i18n-alt="about.alt"
+                 width="1040" height="1574" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
         </figure>
       </div>
     </div>
@@ -275,29 +296,38 @@ redirect_from:
       </header>
       <div class="portfolio-journey-grid">
         <a class="journey-card journey-card--home" href="{{ '/journey/#meitan' | relative_url }}" aria-label="Open Teaching in Meitan, Guizhou Province gallery" data-i18n-aria-label="journey.openMeitan" data-reveal>
-          <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Volunteer teaching group with students in Meitan, Guizhou Province" data-i18n-alt="journey.meitanAlt"
-               width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/meitan/meitan-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/meitan/meitan-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/meitan/meitan-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Volunteer teaching group with students in Meitan, Guizhou Province" data-i18n-alt="journey.meitanAlt"
+                 width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-title" data-i18n="journey.meitanTitle">Teaching in Meitan, Guizhou Province</span>
         </a>
         <a class="journey-card journey-card--home" href="{{ '/journey/#ece484' | relative_url }}" aria-label="Open ECE 484 Autonomous Tracking Drone gallery" data-i18n-aria-label="journey.openEce" data-reveal>
-          <img src="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Drone flight-testing facility for ECE 484" data-i18n-alt="journey.eceAlt"
-               width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/ece484/ece484-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/ece484/ece484-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/ece484/ece484-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Drone flight-testing facility for ECE 484" data-i18n-alt="journey.eceAlt"
+                 width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-title" data-i18n="journey.eceTitle">ECE 484 — Autonomous Tracking Drone</span>
         </a>
         <a class="journey-card journey-card--home" href="{{ '/journey/#chicago' | relative_url }}" aria-label="Open A Journey Through Chicago gallery" data-i18n-aria-label="journey.openChicago" data-reveal>
-          <img src="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }}"
-               srcset="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.webp' | relative_url }} 1200w"
-               sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
-               alt="Cloud Gate in Chicago framed by trees" data-i18n-alt="journey.chicagoAlt"
-               width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          <picture class="journey-card-picture">
+            <source type="image/avif" srcset="{{ '/assets/media/journey/chicago/chicago-01-720.avif' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.avif' | relative_url }} 1200w" sizes="(max-width: 820px) calc(100vw - 64px), 32vw" />
+            <img src="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }}"
+                 srcset="{{ '/assets/media/journey/chicago/chicago-01-720.webp' | relative_url }} 720w, {{ '/assets/media/journey/chicago/chicago-01-1200.webp' | relative_url }} 1200w"
+                 sizes="(max-width: 820px) calc(100vw - 64px), 32vw"
+                 alt="Cloud Gate in Chicago framed by trees" data-i18n-alt="journey.chicagoAlt"
+                 width="1200" height="900" loading="lazy" decoding="async" fetchpriority="low" />
+          </picture>
           <span class="journey-card-shade" aria-hidden="true"></span>
           <span class="journey-card-title" data-i18n="journey.chicagoTitle">A Journey Through Chicago</span>
         </a>

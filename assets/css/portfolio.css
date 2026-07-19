@@ -1122,6 +1122,12 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   object-fit: cover;
 }
 
+.portfolio-media-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .portfolio-story-face--back {
   display: flex;
   padding: clamp(1.65rem, 3.3vw, 3rem);
@@ -1264,6 +1270,11 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   margin: 0;
 }
 
+.portfolio-project-picture,
+.journey-card-picture {
+  display: contents;
+}
+
 .portfolio-project-fallback {
   border: 0;
   object-fit: cover;
@@ -1404,6 +1415,12 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   border-bottom-color: rgba(239, 252, 255, 0.72);
   border-left-color: rgba(7, 80, 132, 0.45);
   animation: portfolio-nava-spin 8s linear infinite reverse;
+}
+
+.portfolio-project-media--nava:not(.is-motion-active) .portfolio-nava-visual::before,
+.portfolio-project-media--nava:not(.is-motion-active) .portfolio-nava-visual::after,
+.portfolio-project-media--nava:not(.is-motion-active) .portfolio-nava-ring {
+  animation-play-state: paused;
 }
 
 .portfolio-project-media[data-model-ready="true"] canvas {
