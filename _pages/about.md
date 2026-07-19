@@ -157,6 +157,11 @@ redirect_from:
           <div class="portfolio-project-copy">
             <div class="portfolio-project-title-row">
               <h3><span>CoRe-VQA: Collaborative Agentic Reasoning</span> <span>for Implicit Video Question Answering</span></h3>
+              <div class="portfolio-project-icon-links" aria-label="CoRe-VQA links" data-i18n-aria-label="project.coreLinks">
+                <a href="https://github.com/ChiZhang-805/CoRe-VQA" target="_blank" rel="noopener noreferrer" aria-label="Open the CoRe-VQA GitHub repository" data-i18n-aria-label="project.coreGithub" title="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg>
+                </a>
+              </div>
             </div>
             <p class="portfolio-project-byline portfolio-project-byline--authors">
               <a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true">·</span>
@@ -191,6 +196,9 @@ redirect_from:
             <div class="portfolio-project-title-row">
               <h3>NAVA</h3>
               <div class="portfolio-project-icon-links" aria-label="NAVA links" data-i18n-aria-label="project.navaLinks">
+                <a href="https://github.com/Tj-jiaoao/style-muse-next" target="_blank" rel="noopener noreferrer" aria-label="Open the NAVA web version" data-i18n-aria-label="project.navaSite" title="Website" data-i18n-title="common.website">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.2 2.5 3.4 5.5 3.4 9S14.2 18.5 12 21M12 3C9.8 5.5 8.6 8.5 8.6 12s1.2 6.5 3.4 9"></path></svg>
+                </a>
                 <a href="https://github.com/ChiZhang-805/nava-app" target="_blank" rel="noopener noreferrer" aria-label="Open the NAVA GitHub repository" data-i18n-aria-label="project.navaGithub" title="GitHub">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg>
                 </a>
