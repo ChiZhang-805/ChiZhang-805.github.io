@@ -173,6 +173,41 @@ redirect_from:
             </p>
           </div>
         </article>
+
+        <article class="portfolio-project-card portfolio-project-card--nava" data-reveal>
+          <div class="portfolio-project-media portfolio-project-media--nava" data-nava-rhythm-card aria-label="Animated NAVA biological-rhythm visual" data-i18n-aria-label="project.navaViewer">
+            <canvas class="portfolio-nava-canvas" aria-hidden="true"></canvas>
+            <div class="portfolio-nava-visual" aria-hidden="true">
+              <div class="portfolio-nava-orb">
+                <span class="portfolio-nava-ring portfolio-nava-ring--outer"></span>
+                <span class="portfolio-nava-ring portfolio-nava-ring--inner"></span>
+                <strong>NAVA</strong>
+                <small>Daily Rhythm</small>
+              </div>
+              <ul class="portfolio-nava-factors">
+                <li data-i18n="project.navaFactor1">Circadian</li>
+                <li data-i18n="project.navaFactor2">Recovery</li>
+                <li data-i18n="project.navaFactor3">Behavior</li>
+                <li data-i18n="project.navaFactor4">Affect</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="portfolio-project-copy">
+            <div class="portfolio-project-title-row">
+              <h3>NAVA</h3>
+              <div class="portfolio-project-icon-links" aria-label="NAVA links" data-i18n-aria-label="project.navaLinks">
+                <a href="https://github.com/ChiZhang-805/nava-app" target="_blank" rel="noopener noreferrer" aria-label="Open the NAVA GitHub repository" data-i18n-aria-label="project.navaGithub" title="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8a9.4 9.4 0 0 0-3 18.3c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.3-.3-4.6-1.1-4.6-4.7 0-1 .4-1.9 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.6 1a9 9 0 0 1 4.8 0c1.8-1.3 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.7.7 1 1.5 1 2.5 0 3.6-2.3 4.4-4.6 4.7.4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.4 9.4 0 0 0 12 2.8Z"></path></svg>
+                </a>
+              </div>
+            </div>
+            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">NAVA Team</a></p>
+            <p class="portfolio-project-description" data-i18n="project.navaDescription">
+              NAVA is an AI biological-rhythm app that connects mobile health records, HealthKit data, Supabase services, and rhythm modeling into a daily wellness companion. I lead the app development and work as an algorithm-team contributor, helping refine the rhythm engine, validate multi-day signals, and turn model outputs into clear product interfaces for users.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -189,6 +224,9 @@ redirect_from:
           </p>
           <p class="portfolio-about-paragraph">
             <span data-i18n="about.bodyBeforeHanzhi">Previously, I completed a year-long Student Research Training Program in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/mahanzhi" target="_blank" rel="noopener noreferrer" data-i18n="about.hanzhiName">Hanzhi Ma</a><span data-i18n="about.bodyBetweenTeachers">'s group (National SRTP). My research focused on high-speed signal-channel modeling using machine learning and multi-objective optimization, and the project received an Excellent rating at its final evaluation. During the summer after my sophomore year, I also worked in </span><a class="portfolio-about-teacher-link" href="https://person.zju.edu.cn/caojixing" target="_blank" rel="noopener noreferrer" data-i18n="about.jixingName">Jixing Cao</a><span data-i18n="about.bodyAfterJixing">'s group on YOLOv11-based detection of tunnel fires and vehicle collisions.</span>
+          </p>
+          <p class="portfolio-about-paragraph">
+            <span data-i18n="about.navaBefore">I am also leading the app development of </span><a class="portfolio-about-teacher-link portfolio-about-project-link" href="https://github.com/ChiZhang-805/nava-app" target="_blank" rel="noopener noreferrer">NAVA</a><span data-i18n="about.navaAfter">, an AI biological-rhythm app, while supporting the algorithm team in refining rhythm-model iterations and connecting them to real product interfaces.</span>
           </p>
           <ul class="portfolio-about-topics" aria-label="Research interests" data-i18n-aria-label="about.topicsLabel">
             <li><span class="portfolio-about-topic-label">Topic 1</span><span data-i18n="about.topic1">Multimodal video understanding</span></li>

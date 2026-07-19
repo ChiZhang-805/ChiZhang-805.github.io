@@ -746,6 +746,19 @@ body {
   60% { transform: translateY(-7px) scale(1.03); }
 }
 
+@keyframes portfolio-nava-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes portfolio-nava-breathe {
+  0%, 100% { opacity: 0.72; transform: scale(0.96); }
+  50% { opacity: 1; transform: scale(1.035); }
+}
+
+@keyframes portfolio-nava-drift {
+  to { transform: rotate(342deg); }
+}
+
 @media (max-width: 980px) {
   .masthead__inner-wrap {
     padding-inline: 1.75rem;
@@ -1273,6 +1286,152 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
   transition: opacity 300ms ease;
 }
 
+.portfolio-project-media--nava {
+  background:
+    radial-gradient(circle at 34% 20%, rgba(255, 255, 255, 0.64), transparent 30%),
+    linear-gradient(145deg, #dff6ff 0%, #6fc4eb 45%, #0a4978 100%);
+  touch-action: auto;
+}
+
+.portfolio-project-media--nava .portfolio-nava-canvas {
+  z-index: 0;
+  opacity: 1;
+}
+
+.portfolio-nava-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  padding: clamp(1.1rem, 4.5vw, 1.7rem);
+  place-items: center;
+  pointer-events: none;
+}
+
+.portfolio-nava-visual::before,
+.portfolio-nava-visual::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.portfolio-nava-visual::before {
+  width: 74%;
+  height: 74%;
+  border: 1px solid rgba(248, 253, 255, 0.42);
+  box-shadow:
+    inset 0 0 52px rgba(248, 253, 255, 0.18),
+    0 0 80px rgba(58, 178, 232, 0.3);
+  animation: portfolio-nava-breathe 7.5s ease-in-out infinite;
+}
+
+.portfolio-nava-visual::after {
+  width: 112%;
+  height: 112%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transform: rotate(-18deg);
+  animation: portfolio-nava-drift 14s linear infinite;
+}
+
+.portfolio-nava-orb {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: min(55%, 188px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(248, 253, 255, 0.36);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 36% 28%, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.12) 24%, transparent 44%),
+    radial-gradient(circle, rgba(5, 40, 69, 0.08), rgba(5, 40, 69, 0.28));
+  box-shadow:
+    inset 0 0 36px rgba(255, 255, 255, 0.22),
+    0 28px 70px rgba(4, 38, 70, 0.32);
+  place-items: center;
+  text-align: center;
+  transform: translateY(-0.95rem);
+}
+
+.portfolio-nava-orb strong {
+  position: relative;
+  z-index: 2;
+  color: #071827;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 5.6vw, 3.7rem);
+  font-weight: 900;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  text-shadow: 0 3px 18px rgba(248, 253, 255, 0.62);
+}
+
+.portfolio-nava-orb small {
+  position: absolute;
+  bottom: 19%;
+  z-index: 2;
+  color: rgba(7, 24, 39, 0.72);
+  font-size: clamp(0.58rem, 1.3vw, 0.72rem);
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.portfolio-nava-ring {
+  position: absolute;
+  inset: 9%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.portfolio-nava-ring--outer {
+  border: 2px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.8);
+  border-right-color: rgba(116, 212, 255, 0.58);
+  animation: portfolio-nava-spin 11s linear infinite;
+}
+
+.portfolio-nava-ring--inner {
+  inset: 20%;
+  border: 1px solid transparent;
+  border-bottom-color: rgba(239, 252, 255, 0.72);
+  border-left-color: rgba(7, 80, 132, 0.45);
+  animation: portfolio-nava-spin 8s linear infinite reverse;
+}
+
+.portfolio-nava-factors {
+  position: absolute;
+  right: clamp(0.78rem, 2.6vw, 1.05rem);
+  bottom: clamp(0.85rem, 3vw, 1.25rem);
+  left: clamp(0.78rem, 2.6vw, 1.05rem);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portfolio-nava-factors li {
+  min-width: 0;
+  padding: 0.42rem 0.58rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(248, 253, 255, 0.92);
+  background: rgba(5, 41, 70, 0.38);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  font-size: clamp(0.58rem, 1.18vw, 0.68rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+html[lang="zh-CN"] .portfolio-nava-factors li {
+  letter-spacing: 0.04em;
+}
+
 .portfolio-project-media[data-model-ready="true"] canvas {
   opacity: 1;
 }
@@ -1371,6 +1530,10 @@ html[lang="zh-CN"] .portfolio-hero-copy h1 {
 
 .portfolio-project-card--corevqa .portfolio-project-title-row h3 span {
   white-space: nowrap;
+}
+
+.portfolio-project-card--nava .portfolio-project-title-row h3 {
+  letter-spacing: -0.055em;
 }
 
 html[lang="zh-CN"] .portfolio-project-description {
@@ -1604,11 +1767,11 @@ html[data-theme="dark"] .portfolio-news-link--github .portfolio-github-mark,
   }
 
   .portfolio-work {
-    contain-intrinsic-block-size: auto 1450px;
+    contain-intrinsic-block-size: auto 1850px;
   }
 
   .portfolio-about {
-    contain-intrinsic-block-size: auto 760px;
+    contain-intrinsic-block-size: auto 840px;
   }
 
   .portfolio-news {
@@ -2503,7 +2666,10 @@ body.journey-modal-open {
   .journey-card img,
   .journey-modal,
   .journey-modal-panel,
-  .journey-modal-stage img {
+  .journey-modal-stage img,
+  .portfolio-nava-visual::before,
+  .portfolio-nava-visual::after,
+  .portfolio-nava-ring {
     animation: none !important;
     transition: none !important;
   }
