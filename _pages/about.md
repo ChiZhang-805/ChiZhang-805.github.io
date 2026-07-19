@@ -196,7 +196,7 @@ redirect_from:
                 </a>
               </div>
             </div>
-            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">NAVA Team</a></p>
+            <p class="portfolio-project-byline"><a href="{{ '/' | relative_url }}">Ao Jiao</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Yitong Liu</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Faud</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Chi Zhang</a><span aria-hidden="true"> · </span><a href="{{ '/' | relative_url }}">Haoyu Lin</a></p>
             <p class="portfolio-project-description" data-i18n="project.navaDescription">
               NAVA is an AI biological-rhythm app that connects mobile health records, HealthKit data, Supabase services, and rhythm modeling into a daily wellness companion. I lead the app development and work as an algorithm-team contributor, helping refine the rhythm engine, validate multi-day signals, and turn model outputs into clear product interfaces so daily feedback stays lightweight, personal, useful, and actionable.
             </p>
