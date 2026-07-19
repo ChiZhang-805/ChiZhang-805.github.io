@@ -184,12 +184,6 @@ redirect_from:
                 <strong>NAVA</strong>
                 <small>Daily Rhythm</small>
               </div>
-              <ul class="portfolio-nava-factors">
-                <li data-i18n="project.navaFactor1">Circadian</li>
-                <li data-i18n="project.navaFactor2">Recovery</li>
-                <li data-i18n="project.navaFactor3">Behavior</li>
-                <li data-i18n="project.navaFactor4">Affect</li>
-              </ul>
             </div>
           </div>
 

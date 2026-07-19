@@ -53,10 +53,6 @@
       "project.raceDescription": "RaceCar Lab is an interactive formula-car engineering environment with a code-generated 3D vehicle, component studies, formulas, diagnostics, and bilingual learning paths. Its McLaren-inspired presentation reflects my support for McLaren and Lando Norris, while my girlfriend supports Ferrari and Charles Leclerc—turning our rivalry into a way to explore racing engineering.",
       "project.coreDescription": "CoRe-VQA is a collaborative multi-agent framework for implicit video question answering. It separates clue scouting, relation judging, consensus voting, and confidence-gated memory refinement into specialized roles. Prepared for AAAI submission, it improves hidden-evidence I-VQA accuracy from 55.14% to 63.59% across traffic-video and transfer benchmarks.",
       "project.navaDescription": "NAVA is an AI biological-rhythm app that connects mobile health records, HealthKit data, Supabase services, and rhythm modeling into a daily wellness companion. I lead the app development and work as an algorithm-team contributor, helping refine the rhythm engine, validate multi-day signals, and turn model outputs into clear product interfaces so daily feedback stays lightweight, personal, useful, and actionable.",
-      "project.navaFactor1": "Circadian",
-      "project.navaFactor2": "Recovery",
-      "project.navaFactor3": "Behavior",
-      "project.navaFactor4": "Affect",
       "project.droneViewer": "Interactive 3D DroneDream quadcopter",
       "project.raceViewer": "Interactive 3D formula race car",
       "project.navaViewer": "Animated NAVA biological-rhythm visual",
@@ -160,10 +156,6 @@
       "project.raceDescription": "RaceCar Lab 是一个交互式方程式赛车工程环境，整合代码生成的 3D 赛车、部件研究、公式、诊断工具与双语学习路径。迈凯伦风格的展示源于我对 McLaren 和 Lando Norris 的支持，而我的女朋友支持 Ferrari 和 Charles Leclerc；这份友好的竞争让我们以更具个人色彩的方式探索车辆结构、工程原理与参数变化，并让赛车学习更直观、更有趣。",
       "project.coreDescription": "CoRe-VQA 是一个面向隐式视频问答的协作式多智能体框架，将上下文线索搜索、关系判断、共识投票与置信度门控的记忆优化分别交给不同智能体。目前项目正准备投稿 AAAI，并将隐藏证据 I-VQA 的准确率从 55.14% 提升至 63.59%，同时在交通视频问答与迁移测试中展现出进一步的泛化能力，并提升不同场景下证据推理的稳定性，也让推理过程更便于分析、复查与改进。",
       "project.navaDescription": "NAVA 是一个面向生物节律与日常健康管理的 AI 应用，把移动端健康记录、HealthKit 数据、Supabase 服务和节律建模连接到一起。我主要负责 App 开发，同时作为算法团队成员协助节律模型迭代，参与多日健康信号的验证、解释与产品化呈现，把模型输出转化为用户能够理解和使用的健康洞察。它进一步把作息、恢复、行为和情绪状态放在同一个界面中，帮助用户连续观察自己的节律变化，并把每天的反馈用于后续健康决策与体验优化。",
-      "project.navaFactor1": "昼夜节律",
-      "project.navaFactor2": "恢复状态",
-      "project.navaFactor3": "行为模式",
-      "project.navaFactor4": "情绪状态",
       "project.droneViewer": "可交互旋转的 DroneDream 无人机三维模型",
       "project.raceViewer": "可交互旋转的方程式赛车三维模型",
       "project.navaViewer": "NAVA 生物节律动态视觉",
@@ -336,7 +328,7 @@
     let width = 0;
     let height = 0;
     const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
-    const factors = [
+    const accents = [
       { phase: 0.1, color: "rgba(239, 252, 255, 0.82)", amplitude: 0.16 },
       { phase: 1.7, color: "rgba(116, 212, 255, 0.72)", amplitude: 0.12 },
       { phase: 3.1, color: "rgba(79, 145, 215, 0.62)", amplitude: 0.1 },
@@ -357,26 +349,70 @@
       context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     };
 
-    const drawCurve = (time, factor, index) => {
-      const yBase = height * (0.37 + index * 0.1);
-      const amplitude = height * factor.amplitude;
+    const heartbeatSignal = (phase) => {
+      if (phase < 0.08) return Math.sin((phase / 0.08) * Math.PI) * 0.08;
+      if (phase < 0.105) return -0.16 * ((phase - 0.08) / 0.025);
+      if (phase < 0.13) return -0.16 + 1.22 * ((phase - 0.105) / 0.025);
+      if (phase < 0.158) return 1.06 - 1.46 * ((phase - 0.13) / 0.028);
+      if (phase < 0.22) return -0.4 + 0.4 * ((phase - 0.158) / 0.062);
+      if (phase < 0.48) return Math.sin(((phase - 0.22) / 0.26) * Math.PI) * 0.2;
+      return 0;
+    };
+
+    const drawHeartbeatLine = (time, options) => {
+      const baseline = height * options.baseline;
+      const amplitude = height * options.amplitude;
+      const travel = time * options.speed + options.offset;
       context.beginPath();
-      for (let step = 0; step <= 128; step += 1) {
-        const progress = step / 128;
+      for (let step = 0; step <= 180; step += 1) {
+        const progress = step / 180;
         const x = progress * width;
-        const wave =
-          Math.sin(progress * Math.PI * 2.1 + time * 0.001 + factor.phase) * amplitude +
-          Math.sin(progress * Math.PI * 4.6 - time * 0.0007 + factor.phase * 0.8) * amplitude * 0.34;
-        const y = yBase + wave;
+        const phase = (((progress * options.beats - travel) % 1) + 1) % 1;
+        const micro =
+          Math.sin(progress * Math.PI * 10 + time * 0.0011) * height * options.micro +
+          Math.sin(progress * Math.PI * 3.2 - time * 0.0007) * height * options.micro * 0.42;
+        const y = baseline + micro - heartbeatSignal(phase) * amplitude;
         if (step === 0) context.moveTo(x, y);
         else context.lineTo(x, y);
       }
-      context.strokeStyle = factor.color;
-      context.lineWidth = Math.max(1.2, width * 0.006);
-      context.shadowColor = factor.color;
-      context.shadowBlur = 18;
+      context.strokeStyle = options.color;
+      context.lineWidth = Math.max(options.minLineWidth, width * options.lineScale);
+      context.shadowColor = options.shadow;
+      context.shadowBlur = options.shadowBlur;
       context.stroke();
       context.shadowBlur = 0;
+    };
+
+    const drawHeartbeat = (time) => {
+      context.save();
+      context.globalCompositeOperation = "screen";
+      drawHeartbeatLine(time, {
+        baseline: 0.82,
+        amplitude: 0.16,
+        beats: 3.05,
+        color: "rgba(246, 253, 255, 0.78)",
+        shadow: "rgba(246, 253, 255, 0.72)",
+        shadowBlur: 16,
+        speed: 0.00026,
+        offset: 0.08,
+        micro: 0.006,
+        minLineWidth: 1.25,
+        lineScale: 0.0052
+      });
+      drawHeartbeatLine(time, {
+        baseline: 0.87,
+        amplitude: 0.09,
+        beats: 3.05,
+        color: "rgba(30, 103, 157, 0.42)",
+        shadow: "rgba(116, 212, 255, 0.28)",
+        shadowBlur: 10,
+        speed: 0.0002,
+        offset: 0.42,
+        micro: 0.004,
+        minLineWidth: 1,
+        lineScale: 0.0038
+      });
+      context.restore();
     };
 
     const draw = (time = 0) => {
@@ -403,10 +439,6 @@
         context.fillRect(0, 0, width, height);
       }
 
-      context.globalCompositeOperation = "screen";
-      factors.forEach((factor, index) => drawCurve(time, factor, index));
-      context.globalCompositeOperation = "source-over";
-
       const centerX = width * 0.5;
       const centerY = height * 0.49;
       const radius = width * 0.245;
@@ -416,7 +448,7 @@
         const end = start + Math.PI * (0.52 + i * 0.035);
         context.beginPath();
         context.arc(centerX, centerY, radius + i * 9, start, end);
-        context.strokeStyle = factors[i].color;
+        context.strokeStyle = accents[i].color;
         context.lineWidth = Math.max(1.4, width * 0.0045);
         context.stroke();
       }
@@ -431,6 +463,8 @@
         context.stroke();
       }
       context.globalAlpha = 1;
+
+      drawHeartbeat(time);
 
       if (!reducedMotion.matches && running) frame = window.requestAnimationFrame(draw);
     };
